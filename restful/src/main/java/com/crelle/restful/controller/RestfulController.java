@@ -1,8 +1,7 @@
 package com.crelle.restful.controller;
 
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
@@ -17,12 +16,25 @@ import javax.xml.ws.RequestWrapper;
  * @Version 1.0
  **/
 @RestController
+@RequestMapping("/rest")
 public class RestfulController {
 
-    @RequestMapping("/hello")
-    public ModelAndView hello(HttpServletRequest request, @RequestParam(value = "name", defaultValue = "springboot-thymeleaf") String name) {
-        ModelAndView modelAndView = new ModelAndView("home");
-        request.setAttribute("name", name);
-            return modelAndView;
+    @RequestMapping("/index")
+    public ModelAndView index(){
+        return new ModelAndView("home");
+    }
+
+    @GetMapping
+    public ModelAndView get(HttpServletRequest request, Model model) {
+        ModelAndView modelAndView = new ModelAndView("home::getMapping");
+        modelAndView.addObject("name","this is http method is get!");
+        return modelAndView;
+    }
+
+    @PostMapping
+    public ModelAndView post(){
+        ModelAndView modelAndView = new ModelAndView("home::getMapping");
+        modelAndView.addObject("name","this is http method is get!");
+        return modelAndView;
     }
 }
