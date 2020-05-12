@@ -3,9 +3,7 @@ package com.crelle.restful.controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
-
 import javax.servlet.http.HttpServletRequest;
-import javax.xml.ws.RequestWrapper;
 
 /**
  * @ProjectName try-new-technologies
@@ -25,10 +23,10 @@ public class RestfulController {
     }
 
     @GetMapping
-    public ModelAndView get(HttpServletRequest request, Model model) {
-        ModelAndView modelAndView = new ModelAndView("home::getMapping");
-        modelAndView.addObject("name","this is http method is get!");
-        return modelAndView;
+    public String get() {
+//        ModelAndView modelAndView = new ModelAndView("home::getMapping");
+//        modelAndView.addObject("name","this is http method is get!");
+        return "this is http get method!";
     }
 
     @PostMapping
