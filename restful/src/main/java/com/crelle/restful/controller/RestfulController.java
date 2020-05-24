@@ -1,9 +1,10 @@
 package com.crelle.restful.controller;
 
-import org.springframework.ui.Model;
+import com.crelle.restful.model.ReponseBean;
+import com.crelle.restful.model.RequestBean;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
-import javax.servlet.http.HttpServletRequest;
+
 
 /**
  * @ProjectName try-new-technologies
@@ -23,16 +24,19 @@ public class RestfulController {
     }
 
     @GetMapping
-    public String get() {
-//        ModelAndView modelAndView = new ModelAndView("home::getMapping");
-//        modelAndView.addObject("name","this is http method is get!");
-        return "this is http get method!";
+    public ReponseBean get(RequestBean requestbean) {
+
+        return new ReponseBean();
     }
 
     @PostMapping
-    public ModelAndView post(){
-        ModelAndView modelAndView = new ModelAndView("home::getMapping");
-        modelAndView.addObject("name","this is http method is get!");
-        return modelAndView;
+    public ReponseBean post(RequestBean requestBean){
+        return new ReponseBean();
+    }
+
+    @DeleteMapping
+    public ReponseBean delete(RequestBean requestBean){
+
+        return null;
     }
 }
