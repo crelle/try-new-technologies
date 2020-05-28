@@ -43,13 +43,13 @@
         // $('#getMapping').load("/rest/get");
         $.ajax({
             // url:"/rest/get",
-            // type:'GET',
+            type:'GET',
             success:function (data) {
                 debugger;
                 $("#getMapping").html(data);
             },
             error:function (data) {
-debugger;
+                    debugger;
             }
         })
     }

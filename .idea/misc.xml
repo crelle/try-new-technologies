@@ -8,6 +8,8 @@
       <list>
         <option value="$PROJECT_DIR$/restful/pom.xml" />
         <option value="$PROJECT_DIR$/joda/pom.xml" />
+        <option value="$PROJECT_DIR$/gs-gateway/complete/pom.xml" />
+        <option value="$PROJECT_DIR$/gs-gateway/initial/pom.xml" />
       </list>
     </option>
   </component>

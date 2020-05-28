@@ -4,6 +4,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 import javax.servlet.http.HttpServletRequest;
+import java.util.Map;
 
 /**
  * @ProjectName try-new-technologies
@@ -22,11 +23,35 @@ public class RestfulController {
         return new ModelAndView("home");
     }
 
-    @GetMapping
-    public String get() {
-//        ModelAndView modelAndView = new ModelAndView("home::getMapping");
-//        modelAndView.addObject("name","this is http method is get!");
-        return "this is http get method!";
+    /**
+     * @Description 演示@GetMapping用法
+     * @Param: [model]
+     * @Return: java.lang.String
+     * @Author: crelle
+     * @Date: 2020/5/15 15:43
+     */
+    @GetMapping(path = "/")
+    public String get(Model model) {
+        model.addAttribute("name","this http method is get!");
+        return "getMapping";
+    }
+
+    /**
+     * @Description 演示PathVariable用法
+     * @Param: [model, id]
+     * @Return: java.lang.String
+     * @Author: crelle
+     * @Date: 2020/5/15 15:44
+     */
+    @GetMapping("/{id}")
+    public String get(Model model,@PathVariable(name = "id") String id){
+        return null;
+    }
+
+
+    @GetMapping("/{id,name}")
+    public String get(Map<String,String> map){
+        return null;
     }
 
     @PostMapping
