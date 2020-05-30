@@ -2,10 +2,12 @@ package com.crelle.restful.controller;
 
 import com.crelle.restful.model.ReponseBean;
 import com.crelle.restful.model.RequestBean;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 import javax.servlet.http.HttpServletRequest;
 import java.util.Map;
+
 
 
 /**
@@ -59,7 +61,6 @@ public class RestfulController {
     public ReponseBean get(RequestBean requestbean) {
 
         return new ReponseBean();
-
     }
 
     @PostMapping
