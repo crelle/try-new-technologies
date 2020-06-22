@@ -18,9 +18,12 @@ public class PathPrefix {
 
     {
             Properties properties = Utils.buildProperties();
-            this.setFtpWebPath("localWebPath");
+            this.setLocalWebPath(properties.getProperty("localWebPath"));
             this.setLocalClassPath(properties.getProperty("localClassPath"));
             this.setFtpClassPath(properties.getProperty("ftpClassPath"));
+            this.setFtpWebPath(properties.getProperty("ftpWebPath"));
+            this.setFtpRollBackClassPath(properties.getProperty("ftpRollBackClassPath"));
+            this.setFtpRollBackWebPath(properties.getProperty("ftpRollBackWebPath"));
     }
 
     private String localClassPath;
@@ -30,6 +33,10 @@ public class PathPrefix {
     private String ftpClassPath;
 
     private String ftpWebPath;
+
+    private String ftpRollBackClassPath;
+
+    private String ftpRollBackWebPath;
 
     public String getLocalClassPath() {
         return localClassPath;
@@ -63,6 +70,22 @@ public class PathPrefix {
         this.ftpWebPath = ftpWebPath;
     }
 
+    public String getFtpRollBackClassPath() {
+        return ftpRollBackClassPath;
+    }
+
+    public void setFtpRollBackClassPath(String ftpRollBackClassPath) {
+        this.ftpRollBackClassPath = ftpRollBackClassPath;
+    }
+
+    public String getFtpRollBackWebPath() {
+        return ftpRollBackWebPath;
+    }
+
+    public void setFtpRollBackWebPath(String ftpRollBackWebPath) {
+        this.ftpRollBackWebPath = ftpRollBackWebPath;
+    }
+
     @Override
     public String toString() {
         return "PathPrefix{" +
@@ -70,6 +93,8 @@ public class PathPrefix {
                 ", localWebPath='" + localWebPath + '\'' +
                 ", ftpClassPath='" + ftpClassPath + '\'' +
                 ", ftpWebPath='" + ftpWebPath + '\'' +
+                ", ftpRollBackClassPath='" + ftpRollBackClassPath + '\'' +
+                ", ftpRollBackWebPath='" + ftpRollBackWebPath + '\'' +
                 '}';
     }
 }

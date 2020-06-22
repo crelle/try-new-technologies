@@ -1,6 +1,13 @@
 package com.crelle.start;
 
+import com.crelle.start.common.Utils;
 import com.crelle.start.dto.PathPrefix;
+import org.apache.commons.net.ftp.FTPClient;
+
+import javax.imageio.plugins.jpeg.JPEGImageReadParam;
+import java.io.*;
+import java.time.Period;
+import java.util.*;
 
 /**
  * @ProjectName try-new-technologies
@@ -11,20 +18,8 @@ import com.crelle.start.dto.PathPrefix;
  * @Version 1.0
  **/
 public class Main {
-    public static void main(String[] args) {
-            new Entry();
+    public static void main(String[] args) throws IOException, Exception {
+        new Entry(args);
     }
 }
 
-class  Entry{
-
-    private String[] arges;
-
-    public Entry(String[] arges) {
-        this.arges = arges;
-    }
-
-    public Entry() {
-        new PathPrefix();
-    }
-}
