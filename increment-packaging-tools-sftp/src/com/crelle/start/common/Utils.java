@@ -5,6 +5,7 @@ import com.crelle.start.dto.PathPrefix;
 import java.io.*;
 import java.lang.String;
 
+import com.jcraft.jsch.*;
 import com.sun.istack.internal.NotNull;
 import org.apache.commons.net.ftp.FTPClient;
 import org.apache.commons.net.ftp.FTPFile;
@@ -21,6 +22,7 @@ import java.util.Properties;
  **/
 public abstract class Utils {
 
+    private static Session sshSession = null;
 
     public static Properties buildProperties(){
         Properties properties = new Properties();
@@ -35,21 +37,29 @@ public abstract class Utils {
 
 
 
-    public static String connectServer(String ip ,int port,String user,String password,String path,FTPClient ftpClient) throws IOException {
-        ftpClient.connect(java.lang.String.valueOf(ip),port);
-        //用于记录连接服务器的返回日志
-        StringBuffer ftpReply = new StringBuffer();
-        String replys[] = ftpClient.getReplyStrings();
-        for (int i = 0; i < replys.length; i++) {
-            ftpReply.append(replys[i]);
+    public static ChannelSftp connectServer(String ip , int port, String user, String password, String path, ChannelSftp channelSftp) throws IOException {
+        JSch jsch = new JSch();
+        try {
+            jsch.getSession(user, ip, port);
+            sshSession = jsch.getSession(user, ip, port);
+            sshSession.setPassword(password);
+            Properties properties = new Properties();
+            properties.put("StrictHostKeyChecking", "no");
+            properties.put("kex","diffie-hellman-group14-sha1");
+            sshSession.setConfig(properties);
+            sshSession.connect();
+            Channel channel = sshSession.openChannel("sftp");
+            channel.connect();
+            channelSftp = (ChannelSftp) channel;
+        } catch (JSchException e) {
+            throw new RuntimeException("sftp连接失败", e);
         }
-        ftpClient.login(user,password);
-        return ftpReply.toString();
+        return channelSftp;
     }
 
-    public static void closeServer( FTPClient ftpClient) throws  IOException{
-        if(ftpClient.isConnected()){
-            ftpClient.disconnect();
+    public static void closeServer( ChannelSftp channelSftp) throws  IOException{
+        if(channelSftp.isConnected()){
+            channelSftp.disconnect();
         }
     }
 
@@ -66,8 +76,9 @@ public abstract class Utils {
         return flag;
     }
 
-    public static boolean download(String ftpFileName,String localFileName,String basePath, FTPClient ftpClient) throws Exception {
+    public static boolean download(String ftpFileName,String localFileName,String basePath, ChannelSftp channelSftp) throws Exception {
         boolean flag = false;
+        String remoteFileName = "";
         String pathName =converterFilePathToWinPath(basePath+localFileName,"/");
         File tempFile = new File(pathName);
         File outFile = null;
@@ -90,9 +101,16 @@ public abstract class Utils {
         OutputStream outputStream = null;
         try{
          outputStream =  new FileOutputStream(outFile);
-        flag = ftpClient.retrieveFile(ftpFileName,outputStream);
+            String rFileSeparator = "/";
+            int rDirNameSepIndex = ftpFileName.lastIndexOf(rFileSeparator) + 1;
+            // 获取ftp文件的父路径
+            String ftpDir = ftpFileName.substring(0, rDirNameSepIndex);
+            //获取ftp绝对目录
+            channelSftp.cd(channelSftp.getHome()+ftpDir);
+            remoteFileName = ftpFileName.substring(rDirNameSepIndex);
+            channelSftp.get(remoteFileName,outputStream);
         }catch (Exception e){
-
+                throw new RuntimeException(e);
         }
         finally {
             outputStream.close();

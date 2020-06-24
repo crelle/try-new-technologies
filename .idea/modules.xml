@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/classLoader/classLoader.iml" filepath="$PROJECT_DIR$/classLoader/classLoader.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java-net/java-net.iml" filepath="$PROJECT_DIR$/java-net/java-net.iml" />
       <module fileurl="file://$PROJECT_DIR$/joda/joda.iml" filepath="$PROJECT_DIR$/joda/joda.iml" />
       <module fileurl="file://$PROJECT_DIR$/restful/restful.iml" filepath="$PROJECT_DIR$/restful/restful.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/try-new-technologies.iml" filepath="$PROJECT_DIR$/.idea/try-new-technologies.iml" />
