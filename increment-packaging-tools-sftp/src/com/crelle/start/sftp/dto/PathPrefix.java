@@ -1,4 +1,4 @@
-package com.crelle.start.dto;
+package com.crelle.start.sftp.dto;
 
 import com.crelle.start.sftp.common.Utils;
 

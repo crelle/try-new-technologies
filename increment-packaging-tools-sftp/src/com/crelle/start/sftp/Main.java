@@ -1,4 +1,4 @@
-package com.crelle.start;
+package com.crelle.start.sftp;
 
 import java.io.*;
 

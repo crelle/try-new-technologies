@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="jar" name="recursion-delete-file:jar">
-    <output-path>$PROJECT_DIR$/out/artifacts/recursion_delete_file_jar</output-path>
-    <root id="archive" name="recursion-delete-file.jar">
-      <element id="module-output" name="recursion-delete-file" />
-    </root>
-  </artifact>
-</component>

@@ -1,8 +1,10 @@
-package com.crelle.start;
+package com.crelle.start.sftp;
 
-import com.crelle.start.common.Utils;
-import com.crelle.start.dto.PathPrefix;
+import com.crelle.start.sftp.common.Utils;
+import com.crelle.start.sftp.dto.PathPrefix;
+import com.jcraft.jsch.ChannelSftp;
 import org.apache.commons.net.ftp.FTPClient;
+
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.*;
@@ -16,6 +18,8 @@ public class  Entry{
     private int packageSuccessNum;
     //回滚包成功个数
     private int rollBackpackageSuccessNum;
+
+    private  ChannelSftp channelSftp = null;
 
     public Entry(String[] arges) throws IOException,Exception{
         this.arges = arges;
@@ -123,7 +127,6 @@ public class  Entry{
      * @param lists
      */
     private void buildFabuFiles(List<Map<String,String>> lists,PathPrefix pathPrefix) throws Exception {
-        FTPClient ftpClient = new FTPClient();
         String localClassPath = pathPrefix.getLocalClassPath();
         String localWebPath = pathPrefix.getLocalWebPath();
         String ftpClassPath = pathPrefix.getFtpClassPath();
@@ -138,16 +141,16 @@ public class  Entry{
            "ftpWebPath:"+ftpWebPath+"\r\n"+"ftp IP地址："+ip+"\r\n"+ "port:"+port+"\r\n"+"username:"+username+"\r\n"+"password:"+password+"\r\n"+"basePath:"+basePath );
         //连接ftp服务
         System.out.println("开始连接ftp服务器...");
-        String ftpReply= Utils.connectServer(ip,port,username,password,null,ftpClient);
-        System.out.println("ftp服务器返回信息："+ftpReply);
+        channelSftp= Utils.connectServer(ip,port,username,password,null,channelSftp);
+        System.out.println("ftp服务器成功！");
         System.out.println("开始打包...");
         for (Map<String, String> map : lists){
             if(map.containsKey(localClassPath)){
-                Utils.download(ftpClassPath+map.get(localClassPath),ftpClassPath+map.get(localClassPath),basePath,ftpClient);
+                Utils.download(ftpClassPath+map.get(localClassPath),ftpClassPath+map.get(localClassPath),basePath,channelSftp);
             }
 
             if(map.containsKey(localWebPath)){
-                Utils.download(ftpWebPath+map.get(localWebPath),ftpWebPath+map.get(localWebPath),basePath,ftpClient);
+                Utils.download(ftpWebPath+map.get(localWebPath),ftpWebPath+map.get(localWebPath),basePath,channelSftp);
             }
             packageSuccessNum++;
         }
@@ -175,16 +178,16 @@ public class  Entry{
                 "ftpRollBackWebPath:"+ftpRollBackWebPath+"\r\n"+"ftp IP地址："+ip+"\r\n"+ "port:"+port+"\r\n"+"username:"+username+"\r\n"+"password:"+password+"\r\n"+"basePath:"+basePath );
         //连接ftp服务
         System.out.println("开始连接ftp服务器...");
-        String ftpReply= Utils.connectServer(ip,port,username,password,null,ftpClient);
-        System.out.println("ftp服务器返回信息："+ftpReply);
+//        ChannelSftp channelSftp= Utils.connectServer(ip,port,username,password,null,channelSftp);
+//        System.out.println("ftp服务器返回信息："+ftpReply);
         System.out.println("开始打包...");
         for (Map<String, String> map : lists){
             if(map.containsKey(localClassPath)){
-                Utils.download(ftpRollBackClassPath+map.get(localClassPath),ftpRollBackClassPath+map.get(localClassPath),basePath,ftpClient);
+                Utils.download(ftpRollBackClassPath+map.get(localClassPath),ftpRollBackClassPath+map.get(localClassPath),basePath,channelSftp);
             }
 
             if(map.containsKey(localWebPath)){
-                Utils.download(ftpRollBackWebPath+map.get(localWebPath),ftpRollBackWebPath+map.get(localWebPath),basePath,ftpClient);
+                Utils.download(ftpRollBackWebPath+map.get(localWebPath),ftpRollBackWebPath+map.get(localWebPath),basePath,channelSftp);
             }
             rollBackpackageSuccessNum++;
         }
