@@ -9,8 +9,6 @@
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
-        <option value="$PROJECT_DIR$/joda/pom.xml" />
-        <option value="$PROJECT_DIR$/restful/pom.xml" />
         <option value="$PROJECT_DIR$/classLoader/pom.xml" />
       </list>
     </option>

@@ -7,8 +7,6 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="classLoader" />
-        <module name="restful" />
-        <module name="joda" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
