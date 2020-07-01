@@ -3,8 +3,6 @@ package crelle.test.incrementpackagetools.sftp;
 import crelle.test.incrementpackagetools.sftp.common.Utils;
 import crelle.test.incrementpackagetools.sftp.dto.PathPrefix;
 import com.jcraft.jsch.ChannelSftp;
-import org.apache.commons.net.ftp.FTPClient;
-
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.*;
@@ -18,6 +16,8 @@ public class  Entry{
     private int packageSuccessNum;
     //回滚包成功个数
     private int rollBackpackageSuccessNum;
+    //新增文件个数
+    private int newFileNum;
 
     private  ChannelSftp channelSftp = null;
 
@@ -40,13 +40,20 @@ public class  Entry{
         System.out.println("#####################################回滚包#######################################");
         buildRollBackFiles(pathsList,pathPrefix);
         System.out.println("#####################################结果#######################################");
-        System.out.println("本次待打包文件数量为："+fabuFileNum);
-        System.out.println("打包完成数量为："+packageSuccessNum);
-        System.out.println("回滚包完成数量为："+rollBackpackageSuccessNum);
+        System.out.println("本次打包文件总数量为："+(packageSuccessNum+rollBackpackageSuccessNum-newFileNum));
+        System.out.println("正式包文件数量为："+packageSuccessNum);
+        System.out.println("回滚包文件数量为："+(rollBackpackageSuccessNum-newFileNum));
+        System.out.println("新增文件数量为："+newFileNum);
         if(fabuFileNum == packageSuccessNum && fabuFileNum== rollBackpackageSuccessNum){
             System.out.println("打包成功！");
+            Utils.closeServer(channelSftp);
+            System.out.println("sftp通道已经关闭！");
+            System.exit(0);
         }else{
             System.out.println("打包失败！");
+            Utils.closeServer(channelSftp);
+            System.out.println("sftp通道已经关闭！");
+            System.exit(0);
         }
 
     }
@@ -91,13 +98,13 @@ public class  Entry{
      * @param filePath
      * @return文件名数组
      */
-    private String[] getPaths(String filePath)  throws Exception {
+    private static String[] getPaths(String filePath)  throws Exception {
         FileReader fileReader = null;
         String[] paths = null;
         StringBuffer stringBuffer = new StringBuffer();
         try{
             fileReader = new FileReader(Utils.converterFilePathToWinPath(filePath,"\\"));
-            char[] chars = new char[1024];;
+            char[] chars =new char[10240000];
             while (fileReader.read(chars)!=-1){
                 fileReader.read(chars);
                 stringBuffer.append(chars);
@@ -163,7 +170,6 @@ public class  Entry{
      * @param lists
      */
     private void buildRollBackFiles(List<Map<String,String>> lists,PathPrefix pathPrefix) throws Exception {
-        FTPClient ftpClient = new FTPClient();
         String localClassPath = pathPrefix.getLocalClassPath();
         String localWebPath = pathPrefix.getLocalWebPath();
         String ftpRollBackClassPath = pathPrefix.getFtpRollBackClassPath();
@@ -176,18 +182,14 @@ public class  Entry{
         String basePath = properties.getProperty("basePath");
         System.out.println("localClassPath："+localClassPath+"\r\n"+"localWebPath:"+localWebPath+"\r\n"+"ftpRollBackClassPath:"+ftpRollBackClassPath+"\r\n"+
                 "ftpRollBackWebPath:"+ftpRollBackWebPath+"\r\n"+"ftp IP地址："+ip+"\r\n"+ "port:"+port+"\r\n"+"username:"+username+"\r\n"+"password:"+password+"\r\n"+"basePath:"+basePath );
-        //连接ftp服务
-        System.out.println("开始连接ftp服务器...");
-//        ChannelSftp channelSftp= Utils.connectServer(ip,port,username,password,null,channelSftp);
-//        System.out.println("ftp服务器返回信息："+ftpReply);
         System.out.println("开始打包...");
         for (Map<String, String> map : lists){
             if(map.containsKey(localClassPath)){
-                Utils.download(ftpRollBackClassPath+map.get(localClassPath),ftpRollBackClassPath+map.get(localClassPath),basePath,channelSftp);
+                newFileNum += Utils.download(ftpRollBackClassPath+map.get(localClassPath),ftpRollBackClassPath+map.get(localClassPath),basePath,channelSftp);
             }
 
             if(map.containsKey(localWebPath)){
-                Utils.download(ftpRollBackWebPath+map.get(localWebPath),ftpRollBackWebPath+map.get(localWebPath),basePath,channelSftp);
+                newFileNum += Utils.download(ftpRollBackWebPath+map.get(localWebPath),ftpRollBackWebPath+map.get(localWebPath),basePath,channelSftp);
             }
             rollBackpackageSuccessNum++;
         }

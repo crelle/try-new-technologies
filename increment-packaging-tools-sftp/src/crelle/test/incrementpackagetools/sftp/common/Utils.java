@@ -4,10 +4,7 @@ import crelle.test.incrementpackagetools.sftp.dto.PathPrefix;
 
 import java.io.*;
 import java.lang.String;
-
 import com.jcraft.jsch.*;
-import org.apache.commons.net.ftp.FTPClient;
-import org.apache.commons.net.ftp.FTPFile;
 
 import java.util.Properties;
 
@@ -25,7 +22,7 @@ public abstract class Utils {
 
     public static Properties buildProperties(){
         Properties properties = new Properties();
-        InputStream inputStream = PathPrefix.class.getClassLoader().getResourceAsStream("crelle/test/incrementpackagetools/config/config.properties");
+        InputStream inputStream = PathPrefix.class.getClassLoader().getResourceAsStream("crelle/test/incrementpackagetools/sftp/config/config.properties");
         try {
             properties.load(inputStream);
         } catch (IOException e) {
@@ -62,59 +59,55 @@ public abstract class Utils {
         }
     }
 
-    public static boolean existDirectory(String path, FTPClient ftpClient) throws IOException{
-        boolean flag = false;
-        FTPFile[] ftpFileArr = ftpClient.listFiles();
-        for (int i = 0; i < ftpFileArr.length; i++) {
-            FTPFile ftpFile = ftpFileArr[i];
-            if(null!=ftpFile && ftpFile.isDirectory() && ftpFile.getName().equalsIgnoreCase(path)){
-                flag = true;
-                break;
-            }
-        }
-        return flag;
-    }
-
-    public static boolean download(String ftpFileName,String localFileName,String basePath, ChannelSftp channelSftp) throws Exception {
+    public static int download(String ftpFileName,String localFileName,String basePath, ChannelSftp channelSftp) throws Exception {
         boolean flag = false;
         String remoteFileName = "";
+        String ftpDir = "";
+        int newFileNum = 0;
         String pathName =converterFilePathToWinPath(basePath+localFileName,"/");
         File tempFile = new File(pathName);
-        File outFile = null;
         String fileName = tempFile.getName();
+        String suffix = fileName.substring(fileName.indexOf(".")+1,fileName.length());
+        if(suffix.equals("java")){
+            tempFile = new File(pathName.replace("java","class"));
+        }
+        File outFile = tempFile;
         if(null==fileName || "".equals(fileName)){
             throw new Exception("无法获取文件名！");
         }
-        String suffix = fileName.substring(fileName.indexOf(".")+1,fileName.length());
-        //创建父目录
+        //创建本地父目录
         File parentFile = tempFile.getParentFile();
         if(!parentFile.exists()){
             parentFile.mkdirs();
         }
-
-        if(suffix.equals("java")){
-            outFile = tempFile;
-        }else{
-            outFile = tempFile;
-        }
         OutputStream outputStream = null;
+
         try{
          outputStream =  new FileOutputStream(outFile);
             String rFileSeparator = "/";
             int rDirNameSepIndex = ftpFileName.lastIndexOf(rFileSeparator) + 1;
-            // 获取ftp文件的父路径
-            String ftpDir = ftpFileName.substring(0, rDirNameSepIndex);
-            //获取ftp绝对目录
-            channelSftp.cd(channelSftp.getHome()+ftpDir);
+            // 获取ftp文件的父路径,并切换目录
+            ftpDir = ftpFileName.substring(0, rDirNameSepIndex);
+            channelSftp.cd(ftpDir);
             remoteFileName = ftpFileName.substring(rDirNameSepIndex);
+            //获取文件名后缀
+            if(suffix.equals("java")){
+                remoteFileName = remoteFileName.replace("java","class");
+            }
             channelSftp.get(remoteFileName,outputStream);
         }catch (Exception e){
-                throw new RuntimeException(e);
+                outputStream.close();
+                System.out.println("需要回滚的文件没有找到，工具判定为新增文件:"+ftpDir+remoteFileName);
+                if(tempFile.exists()){
+                   tempFile.delete();
+                    newFileNum++;
+                }
+
         }
         finally {
             outputStream.close();
         }
-        return flag;
+        return newFileNum;
     }
 
     /**
