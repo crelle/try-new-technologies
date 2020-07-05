@@ -6,6 +6,8 @@
       <module fileurl="file://$PROJECT_DIR$/increment-packaging-tools/increment-packaging-tools.iml" filepath="$PROJECT_DIR$/increment-packaging-tools/increment-packaging-tools.iml" />
       <module fileurl="file://$PROJECT_DIR$/increment-packaging-tools-sftp/increment-packaging-tools-sftp.iml" filepath="$PROJECT_DIR$/increment-packaging-tools-sftp/increment-packaging-tools-sftp.iml" />
       <module fileurl="file://$PROJECT_DIR$/lib/lib.iml" filepath="$PROJECT_DIR$/lib/lib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/multithread-client/multithread-client.iml" filepath="$PROJECT_DIR$/multithread-client/multithread-client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/multithread-server/multithread-server.iml" filepath="$PROJECT_DIR$/multithread-server/multithread-server.iml" />
       <module fileurl="file://$PROJECT_DIR$/partial-content-download/partial-content-download.iml" filepath="$PROJECT_DIR$/partial-content-download/partial-content-download.iml" />
       <module fileurl="file://$PROJECT_DIR$/recursion-delete-file/recursion-delete-file.iml" filepath="$PROJECT_DIR$/recursion-delete-file/recursion-delete-file.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/try-new-technologies.iml" filepath="$PROJECT_DIR$/.idea/try-new-technologies.iml" />

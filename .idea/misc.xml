@@ -11,6 +11,7 @@
       <list>
         <option value="$PROJECT_DIR$/classLoader/pom.xml" />
         <option value="$PROJECT_DIR$/partial-content-download/pom.xml" />
+        <option value="$PROJECT_DIR$/server/pom.xml" />
       </list>
     </option>
   </component>
