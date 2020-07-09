@@ -13,6 +13,7 @@
         <option value="$PROJECT_DIR$/partial-content-download/pom.xml" />
         <option value="$PROJECT_DIR$/server/pom.xml" />
         <option value="$PROJECT_DIR$/multithread-server/pom.xml" />
+        <option value="$PROJECT_DIR$/grab-red-package/pom.xml" />
       </list>
     </option>
   </component>

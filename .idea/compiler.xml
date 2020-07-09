@@ -6,13 +6,15 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="classLoader" />
-        <module name="multithread-server" />
         <module name="partial-content-download" />
+        <module name="multithread-server" />
+        <module name="classLoader" />
+        <module name="grab-red-package" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="classLoader" target="1.5" />
+      <module name="grab-red-package" target="1.8" />
       <module name="joda" target="1.8" />
       <module name="multithread-server" target="1.8" />
       <module name="partial-content-download" target="1.8" />
@@ -21,6 +23,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="grab-red-package" options="-parameters" />
       <module name="joda" options="-parameters" />
       <module name="multithread-server" options="-parameters" />
       <module name="partial-content-download" options="-parameters" />
