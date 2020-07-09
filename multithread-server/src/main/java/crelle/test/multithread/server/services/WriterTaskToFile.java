@@ -1,13 +1,13 @@
-package crelle.test.multithread.server.controller;
+package crelle.test.multithread.server.services;
 
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 
-public class Thread1 extends Thread {
+public class WriterTaskToFile extends Thread {
 
     private String paras = "";
-    public Thread1(String paras) {
+    public WriterTaskToFile(String paras) {
         this.paras = paras;
     }
 

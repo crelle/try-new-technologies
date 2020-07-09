@@ -29,8 +29,8 @@ public class ParallelTasks {
                         }
                     }
                 });
-                latch.wait();
             }
+            latch.wait();
         }finally {
             threads.shutdown();
         }
