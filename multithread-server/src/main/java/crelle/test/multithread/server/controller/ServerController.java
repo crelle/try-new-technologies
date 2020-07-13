@@ -11,9 +11,6 @@ import java.io.IOException;
 @RequestMapping("/")
 public class ServerController {
 
-    private long  startTime = 0;
-    private long endTime = 0;
-
     @Autowired
     private WriterToRedisService writerToRedisService;
 
@@ -26,11 +23,7 @@ public class ServerController {
     @PostMapping("/test2")
     public  void test2(@RequestParam("paras") String paras) throws IOException, InterruptedException {
         WriterTaskToFile thread1 = new WriterTaskToFile(paras);
-//        Thread1 thread2 = new Thread1(num);
-//        Thread1 thread3 = new Thread1(num);
         thread1.start();
-//      thread2.start();
-//      thread3.start();
 
     }
 
@@ -39,5 +32,6 @@ public class ServerController {
         writerToRedisService.insertString(paras,paras);
 
     }
+
 
 }
