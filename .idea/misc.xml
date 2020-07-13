@@ -14,6 +14,8 @@
         <option value="$PROJECT_DIR$/server/pom.xml" />
         <option value="$PROJECT_DIR$/multithread-server/pom.xml" />
         <option value="$PROJECT_DIR$/grab-red-package/pom.xml" />
+        <option value="$PROJECT_DIR$/redisson-tools/pom.xml" />
+        <option value="$PROJECT_DIR$/redis-client-tools/pom.xml" />
       </list>
     </option>
   </component>
