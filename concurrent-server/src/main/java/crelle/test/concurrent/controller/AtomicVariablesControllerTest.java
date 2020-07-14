@@ -3,7 +3,9 @@ package crelle.test.concurrent.controller;
 import crelle.test.concurrent.services.impl.AtomicCounter;
 import crelle.test.concurrent.services.impl.CommonCounter;
 import crelle.test.concurrent.services.impl.SynchronizedCounter;
+import jdk.nashorn.internal.ir.CallNode;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -11,6 +13,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 @RequestMapping("/")
 @ResponseBody
+@Scope(value = "prototype")
 public class AtomicVariablesControllerTest {
 
     @Autowired
@@ -55,6 +58,7 @@ public class AtomicVariablesControllerTest {
 
 
     @RequestMapping("/atomic/counter/increment")
+    @Scope(value = "prototype")
     public void atomicCounter(){
         atomicCounter.increment();
     }
@@ -65,6 +69,7 @@ public class AtomicVariablesControllerTest {
     }
 
     @RequestMapping("/atomic/counter/value")
+    @Scope(value = "prototype")
     public int getAtomicCounterValue(){
         return atomicCounter.value();
     }
