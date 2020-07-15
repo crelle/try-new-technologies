@@ -3,7 +3,7 @@ package crelle.test.concurrent.controller;
 import crelle.test.concurrent.services.impl.AtomicCounter;
 import crelle.test.concurrent.services.impl.CommonCounter;
 import crelle.test.concurrent.services.impl.SynchronizedCounter;
-import jdk.nashorn.internal.ir.CallNode;
+import crelle.test.concurrent.services.impl.VolatileCounter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Controller;
@@ -24,6 +24,9 @@ public class AtomicVariablesControllerTest {
 
     @Autowired
     private AtomicCounter atomicCounter;
+
+    @Autowired
+    private VolatileCounter volatileCounter;
 
     @RequestMapping("/common/counter/increment")
     public void incrementCommonCounter(){
@@ -69,9 +72,23 @@ public class AtomicVariablesControllerTest {
     }
 
     @RequestMapping("/atomic/counter/value")
-    @Scope(value = "prototype")
     public int getAtomicCounterValue(){
         return atomicCounter.value();
+    }
+
+    @RequestMapping("/volatile/counter/increment")
+    public void volatileCounter(){
+        volatileCounter.increment();
+    }
+
+    @RequestMapping("/volatile/counter/decrement")
+    public void decrementVolatileCounter(){
+        volatileCounter.decrement();
+    }
+
+    @RequestMapping("/volatile/counter/value")
+    public int getVolatileCounterValue(){
+        return volatileCounter.value();
     }
 
     @RequestMapping("/gc")
