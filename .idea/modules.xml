@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/classLoader/classLoader.iml" filepath="$PROJECT_DIR$/classLoader/classLoader.iml" />
       <module fileurl="file://$PROJECT_DIR$/concurrent-server/concurrent-server.iml" filepath="$PROJECT_DIR$/concurrent-server/concurrent-server.iml" />
       <module fileurl="file://$PROJECT_DIR$/copy-files-with-parallel/copy-files-with-parallel.iml" filepath="$PROJECT_DIR$/copy-files-with-parallel/copy-files-with-parallel.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gatling/gatling.iml" filepath="$PROJECT_DIR$/gatling/gatling.iml" />
       <module fileurl="file://$PROJECT_DIR$/grab-red-package/grab-red-package.iml" filepath="$PROJECT_DIR$/grab-red-package/grab-red-package.iml" />
       <module fileurl="file://$PROJECT_DIR$/increment-packaging-tools/increment-packaging-tools.iml" filepath="$PROJECT_DIR$/increment-packaging-tools/increment-packaging-tools.iml" />
       <module fileurl="file://$PROJECT_DIR$/increment-packaging-tools-sftp/increment-packaging-tools-sftp.iml" filepath="$PROJECT_DIR$/increment-packaging-tools-sftp/increment-packaging-tools-sftp.iml" />

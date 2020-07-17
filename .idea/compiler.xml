@@ -13,11 +13,13 @@
         <module name="grab-red-package" />
         <module name="concurrent-server" />
         <module name="redisson-client-tools" />
+        <module name="gatling" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="classLoader" target="1.5" />
       <module name="concurrent-server" target="1.8" />
+      <module name="gatling" target="1.5" />
       <module name="grab-red-package" target="1.8" />
       <module name="joda" target="1.8" />
       <module name="multithread-server" target="1.8" />

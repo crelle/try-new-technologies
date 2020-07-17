@@ -17,6 +17,7 @@
         <option value="$PROJECT_DIR$/redisson-tools/pom.xml" />
         <option value="$PROJECT_DIR$/redis-client-tools/pom.xml" />
         <option value="$PROJECT_DIR$/concurrent-server/pom.xml" />
+        <option value="$PROJECT_DIR$/gatling/pom.xml" />
       </list>
     </option>
   </component>
