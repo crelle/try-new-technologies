@@ -15,6 +15,7 @@
       <module fileurl="file://$PROJECT_DIR$/partial-content-download/partial-content-download.iml" filepath="$PROJECT_DIR$/partial-content-download/partial-content-download.iml" />
       <module fileurl="file://$PROJECT_DIR$/recursion-delete-file/recursion-delete-file.iml" filepath="$PROJECT_DIR$/recursion-delete-file/recursion-delete-file.iml" />
       <module fileurl="file://$PROJECT_DIR$/redis-client-tools/redisson-client-tools.iml" filepath="$PROJECT_DIR$/redis-client-tools/redisson-client-tools.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-test-unit/spring-test-unit.iml" filepath="$PROJECT_DIR$/spring-test-unit/spring-test-unit.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/try-new-technologies.iml" filepath="$PROJECT_DIR$/.idea/try-new-technologies.iml" />
     </modules>
   </component>

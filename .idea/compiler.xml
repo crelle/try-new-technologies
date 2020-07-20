@@ -2,6 +2,7 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
@@ -9,9 +10,10 @@
         <module name="redis-client-tools" />
         <module name="classLoader" />
         <module name="multithread-server" />
-        <module name="partial-content-download" />
+        <module name="spring-test-unit" />
         <module name="grab-red-package" />
         <module name="concurrent-server" />
+        <module name="partial-content-download" />
         <module name="redisson-client-tools" />
         <module name="gatling" />
       </profile>
@@ -27,6 +29,7 @@
       <module name="redis-client-tools" target="1.8" />
       <module name="redisson-client-tools" target="1.8" />
       <module name="restful" target="1.8" />
+      <module name="spring-test-unit" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -39,6 +42,7 @@
       <module name="redis-client-tools" options="-parameters" />
       <module name="redisson-client-tools" options="-parameters" />
       <module name="restful" options="-parameters" />
+      <module name="spring-test-unit" options="-parameters" />
     </option>
   </component>
 </project>
