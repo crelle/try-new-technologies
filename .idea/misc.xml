@@ -19,8 +19,13 @@
         <option value="$PROJECT_DIR$/concurrent-server/pom.xml" />
         <option value="$PROJECT_DIR$/gatling/pom.xml" />
         <option value="$PROJECT_DIR$/spring-test-unit/pom.xml" />
+        <option value="$PROJECT_DIR$/feign-eureka-test/pom.xml" />
+        <option value="$PROJECT_DIR$/web-server-example/pom.xml" />
+        <option value="$PROJECT_DIR$/rabbitmq-test/pom.xml" />
+        <option value="$PROJECT_DIR$/rabbitmq-consumer-test/pom.xml" />
+        <option value="$PROJECT_DIR$/rabbitmq-producer-test/pom.xml" />
       </list>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="1.8" project-jdk-type="JavaSDK" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="false" project-jdk-name="1.8" project-jdk-type="JavaSDK" />
 </project>
