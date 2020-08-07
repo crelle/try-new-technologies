@@ -17,9 +17,9 @@ import java.util.concurrent.ThreadPoolExecutor;
 public class Producer {
 
     private final static String QUEUE_NAME = "hello";
+    private static int count = 1;
 
     public static void main(String[] argv) throws Exception {
-        int count = 0;
         ConnectionFactory factory = new ConnectionFactory();
         factory.setHost("192.168.74.4");
         factory.setUsername("crelle");
@@ -27,12 +27,12 @@ public class Producer {
         Connection connection = factory.newConnection();
         Channel channel = connection.createChannel();
         channel.queueDeclare(QUEUE_NAME, false, false, false, null);
-        String message = "Hello World!";
         while (true){
+            String message = "Hello World!:";
+            message = message + count;
             channel.basicPublish("", QUEUE_NAME, null, message.getBytes(StandardCharsets.UTF_8));
             System.out.println(" [x] Sent '" + message + "'");
-            System.out.println(++count);
-            Thread.sleep(1000);
+            count++;
         }
     }
 }

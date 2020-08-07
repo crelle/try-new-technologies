@@ -13,7 +13,9 @@ import com.rabbitmq.client.DeliverCallback;
  * @description:消息消费者
  **/
 public class Consumer {
+
     private final static String QUEUE_NAME = "hello";
+    private static int consumerCount = 1;
 
     public static void main(String[] argv) throws Exception {
         ConnectionFactory factory = new ConnectionFactory();
@@ -29,6 +31,13 @@ public class Consumer {
         DeliverCallback deliverCallback = (consumerTag, delivery) -> {
             String message = new String(delivery.getBody(), "UTF-8");
             System.out.println(" [x] Received '" + message + "'");
+            try {
+                //假设处理业务需要100毫秒
+                Thread.sleep(100);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            System.out.println(consumerCount++);
         };
         channel.basicConsume(QUEUE_NAME, true, deliverCallback, consumerTag -> { });
     }
