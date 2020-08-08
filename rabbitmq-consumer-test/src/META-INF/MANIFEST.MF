@@ -1,4 +1,4 @@
 Manifest-Version: 1.0
-Main-Class: workmode.workqueues.WorkerToConsumer
+Main-Class: workmode.publishsubscribe.fanout.ReceiveLogs
 
 
