@@ -24,6 +24,7 @@
         <option value="$PROJECT_DIR$/rabbitmq-test/pom.xml" />
         <option value="$PROJECT_DIR$/rabbitmq-consumer-test/pom.xml" />
         <option value="$PROJECT_DIR$/rabbitmq-producer-test/pom.xml" />
+        <option value="$PROJECT_DIR$/nexus-maven-test/pom.xml" />
       </list>
     </option>
   </component>

@@ -7,16 +7,17 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="redis-client-tools" />
         <module name="web-server-example" />
         <module name="classLoader" />
         <module name="multithread-server" />
-        <module name="partial-content-download" />
+        <module name="nexus-maven-test" />
+        <module name="redis-client-tools" />
+        <module name="feign-eureka-test" />
         <module name="spring-test-unit" />
-        <module name="redisson-client-tools" />
         <module name="grab-red-package" />
         <module name="concurrent-server" />
-        <module name="feign-eureka-test" />
+        <module name="partial-content-download" />
+        <module name="redisson-client-tools" />
         <module name="gatling" />
       </profile>
     </annotationProcessing>
@@ -28,6 +29,7 @@
       <module name="grab-red-package" target="1.8" />
       <module name="joda" target="1.8" />
       <module name="multithread-server" target="1.8" />
+      <module name="nexus-maven-test" target="1.5" />
       <module name="partial-content-download" target="1.8" />
       <module name="producer" target="8" />
       <module name="rabbitmq-consumer-test" target="8" />

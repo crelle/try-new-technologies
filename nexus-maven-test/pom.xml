@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <!--jar包的坐标-->
+    <groupId>com.crelle</groupId>
+    <artifactId>test</artifactId>
+    <version>1.0-RELEASES</version>
+    <packaging>jar</packaging>
+    <!--名称和描述-->
+    <name>test</name>
+    <description>maven repository test</description>
+    <distributionManagement>
+        <!--host release配置-->
+        <repository>
+            <!--id和前面setting.xml中的server节点id一致-->
+            <id>releases</id>
+            <url>http://192.168.74.3:8081/repository/alibaba-release/</url>
+        </repository>
+        <!--host snapshot配置-->
+        <snapshotRepository>
+            <!--id和前面setting.xml中的server节点id一致-->
+            <id>snapshots</id>
+            <url>http://192.168.74.3:8081/repository/alibaba-snapshot/</url>
+        </snapshotRepository>
+    </distributionManagement>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <java.version>1.8</java.version>
+    </properties>
+
+    <!--多环境配置-->
+    <profiles>
+        <profile>
+            <id>dev</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <project.active>dev</project.active>
+            </properties>
+        </profile>
+        <profile>
+            <id>test</id>
+            <properties>
+                <project.active>dev</project.active>
+            </properties>
+        </profile>
+    </profiles>
+
+    <build>
+        <!--最终的打包的名字，没有此配置以maven坐标名字命名-->
+        <finalName>profile test</finalName>
+        <resources>
+            <resource>
+                <directory>${basedir}/src/main/resources</directory>
+                <includes>
+                    <!--suppress UnresolvedMavenProperty -->
+                    <include>${project.active}/**</include>
+                </includes>
+            </resource>
+        </resources>
+
+    </build>
+</project>
