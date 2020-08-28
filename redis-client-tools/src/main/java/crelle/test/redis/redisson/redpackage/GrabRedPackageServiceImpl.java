@@ -16,7 +16,7 @@ public class GrabRedPackageServiceImpl   implements GrabRedPackageService {
     RedissonClient redissonClient = null;
 
     public GrabRedPackageServiceImpl(String host, String port) {
-        redissonClient =  RedissonClientBuilder.createClient(host,port);
+        redissonClient =  RedissonClientBuilder.createClusterClient(host,port,null,"123456");
     }
 
 
@@ -94,6 +94,11 @@ public class GrabRedPackageServiceImpl   implements GrabRedPackageService {
           }finally {
               rlock.unlock();
           }
+    }
+
+    @Override
+    public String getRedPackage(String redPackageName) {
+        return redissonClient.getAtomicDouble(redPackageName).toString();
     }
 
 

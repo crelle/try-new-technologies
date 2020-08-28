@@ -7,38 +7,35 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="gatling" />
-        <module name="redis-client-tools" />
-        <module name="classLoader" />
-        <module name="multithread-server" />
+        <module name="concurrent-server" />
         <module name="redisson-client-tools" />
         <module name="nacos-test" />
         <module name="partial-content-download" />
-        <module name="web-server-example" />
-        <module name="spring-test-unit" />
+        <module name="gatling" />
+        <module name="activiti-quick-start" />
+        <module name="redis-client-tools" />
         <module name="grab-red-package" />
-        <module name="concurrent-server" />
+        <module name="multithread-server" />
+        <module name="classLoader" />
+        <module name="spring-test-unit" />
+        <module name="web-server-example" />
         <module name="feign-eureka-test" />
         <module name="nexus-maven-test" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="activiti-quick-start" target="1.5" />
       <module name="classLoader" target="1.5" />
       <module name="concurrent-server" target="1.8" />
-      <module name="feign-eureka-test" target="1.5" />
       <module name="gatling" target="1.5" />
       <module name="grab-red-package" target="1.8" />
-      <module name="joda" target="1.8" />
       <module name="multithread-server" target="1.8" />
       <module name="nacos-test" target="1.8" />
       <module name="nexus-maven-test" target="1.5" />
       <module name="partial-content-download" target="1.8" />
-      <module name="producer" target="8" />
       <module name="rabbitmq-consumer-test" target="8" />
       <module name="rabbitmq-producer-test" target="8" />
-      <module name="redis-client-tools" target="1.8" />
       <module name="redisson-client-tools" target="1.8" />
-      <module name="restful" target="1.8" />
       <module name="spring-test-unit" target="1.8" />
       <module name="web-server-example" target="1.8" />
     </bytecodeTargetLevel>
@@ -47,13 +44,10 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="concurrent-server" options="-parameters" />
       <module name="grab-red-package" options="-parameters" />
-      <module name="joda" options="-parameters" />
       <module name="multithread-server" options="-parameters" />
       <module name="nacos-test" options="-parameters" />
       <module name="partial-content-download" options="-parameters" />
-      <module name="redis-client-tools" options="-parameters" />
       <module name="redisson-client-tools" options="-parameters" />
-      <module name="restful" options="-parameters" />
       <module name="spring-test-unit" options="-parameters" />
       <module name="web-server-example" options="-parameters" />
     </option>

@@ -16,10 +16,19 @@ public abstract class RedissonClientBuilder {
      * @param port
      * @return
      */
-    public static RedissonClient createClient(String host,String port){
+    public static RedissonClient createSingleClient(String host, String port){
         Config config = new Config();
         config.useSingleServer().setAddress("redis://"+host+":"+port);
         return Redisson.create(config);
+    }
+
+    public static RedissonClient createClusterClient(String host,String port,String userName,String password){
+        Config config = new Config();
+        config.useClusterServers().setPassword(password).addNodeAddress("redis://"+host+":"+port);
+        if(null!=userName){
+            config.useClusterServers().setPassword(password).addNodeAddress("redis://"+host+":"+port).setUsername(userName);
+        }
+        return  Redisson.create(config);
     }
 
     /**

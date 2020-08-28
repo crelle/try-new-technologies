@@ -26,6 +26,7 @@
         <option value="$PROJECT_DIR$/rabbitmq-producer-test/pom.xml" />
         <option value="$PROJECT_DIR$/nexus-maven-test/pom.xml" />
         <option value="$PROJECT_DIR$/nacos-test/pom.xml" />
+        <option value="$PROJECT_DIR$/activiti-quick-start/pom.xml" />
       </list>
     </option>
   </component>

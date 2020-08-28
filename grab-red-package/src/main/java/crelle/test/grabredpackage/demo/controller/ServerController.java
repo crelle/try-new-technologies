@@ -27,35 +27,47 @@ public class ServerController {
     }
 
     /**
-     *
-     * @param redPackageName
-     * @param num
+     *@author:crelle
+     *@date:2020/8/20
+     *@title:increaseRedPackage
+     *@description:增加红包金额
+     *@params:[redPackageName, num]
+     *@return:void
+     *@throw:
      */
     @GetMapping("/increaseRedPackage")
     public  void increaseRedPackage(@RequestParam("redPackageName") String redPackageName,@RequestParam("num") double num){
         grabRedPackageService.increaseRedPackage(redPackageName,num);
+        System.out.println(grabRedPackageService.getRedPackage(redPackageName));
     }
 
     /**
-     * 抢红包
-     * @param redPackageName
-     * @param num
+     *@author:crelle
+     *@date:2020/8/20
+     *@title:decreaseRedPackage
+     *@description:redisson抢红包
+     *@params:[redPackageName, num]
+     *@return:void
+     *@throw:
      */
     @GetMapping("/decreaseRedPackage")
-    public  void decreaseRedPackage(@RequestParam("redPackageName") String redPackageName,@RequestParam("num") double num){
-        grabRedPackageService.decreaseRedPackage(redPackageName,num);
+    public  void decreaseRedPackage(@RequestParam("redPackageName") String redPackageName,@RequestParam("num") double num) throws InterruptedException {
+        while (true){
+            grabRedPackageService.decreaseRedPackage(redPackageName,num);
+            System.out.println(grabRedPackageService.getRedPackage(redPackageName));
+            Thread.sleep(1000);
+        }
     }
 
     /**
-     * 使用reidisson lock抢红包
-     * @param redPackageName
-     * @param num
+     *@author:crelle
+     *@date:2020/8/20
+     *@title:grabRedPackageWithJavaSyncMethod
+     *@description:s使用java同步方式抢红包
+     *@params:[]
+     *@return:void
+     *@throw:
      */
-    @GetMapping("/decreaseRedPackageWithLock")
-    public  void decreaseRedPackageWithLock(@RequestParam("redPackageName") String redPackageName,@RequestParam("num") double num){
-            grabRedPackageService.decreaseRedPackage(redPackageName,num);
-    }
-
     @GetMapping("grabRedPackageWithJavaSyncMethod")
     public void grabRedPackageWithJavaSyncMethod(){
         decrement();
