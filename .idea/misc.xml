@@ -17,7 +17,6 @@
         <option value="$PROJECT_DIR$/redisson-tools/pom.xml" />
         <option value="$PROJECT_DIR$/redis-client-tools/pom.xml" />
         <option value="$PROJECT_DIR$/concurrent-server/pom.xml" />
-        <option value="$PROJECT_DIR$/gatling/pom.xml" />
         <option value="$PROJECT_DIR$/spring-test-unit/pom.xml" />
         <option value="$PROJECT_DIR$/feign-eureka-test/pom.xml" />
         <option value="$PROJECT_DIR$/web-server-example/pom.xml" />
@@ -27,6 +26,7 @@
         <option value="$PROJECT_DIR$/nexus-maven-test/pom.xml" />
         <option value="$PROJECT_DIR$/nacos-test/pom.xml" />
         <option value="$PROJECT_DIR$/activiti-quick-start/pom.xml" />
+        <option value="$PROJECT_DIR$/mysql-jdbc-test/pom.xml" />
       </list>
     </option>
   </component>
