@@ -1,4 +1,4 @@
-package crelle.mysql.jdbc.test;
+package crelle.test.jdbc;
 
 
 import java.sql.Connection;

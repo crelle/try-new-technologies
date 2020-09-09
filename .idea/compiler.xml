@@ -18,9 +18,9 @@
         <module name="classLoader" />
         <module name="spring-test-unit" />
         <module name="web-server-example" />
-        <module name="mysql-jdbc-test" />
         <module name="feign-eureka-test" />
         <module name="nexus-maven-test" />
+        <module name="mysql-tutorial-test" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="8">
@@ -29,7 +29,7 @@
       <module name="concurrent-server" target="1.8" />
       <module name="grab-red-package" target="1.8" />
       <module name="multithread-server" target="1.8" />
-      <module name="mysql-jdbc-test" target="8" />
+      <module name="mysql-tutorial-test" target="8" />
       <module name="nacos-test" target="1.8" />
       <module name="nexus-maven-test" target="8" />
       <module name="partial-content-download" target="1.8" />
