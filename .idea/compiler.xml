@@ -20,18 +20,17 @@
         <module name="web-server-example" />
         <module name="feign-eureka-test" />
         <module name="nexus-maven-test" />
-        <module name="mysql-tutorial-test" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="8">
-      <module name="activiti-quick-start" target="8" />
-      <module name="classLoader" target="8" />
+      <module name="activiti-quick-start" target="1.5" />
+      <module name="classLoader" target="1.5" />
       <module name="concurrent-server" target="1.8" />
       <module name="grab-red-package" target="1.8" />
       <module name="multithread-server" target="1.8" />
       <module name="mysql-tutorial-test" target="8" />
       <module name="nacos-test" target="1.8" />
-      <module name="nexus-maven-test" target="8" />
+      <module name="nexus-maven-test" target="1.5" />
       <module name="partial-content-download" target="1.8" />
       <module name="rabbitmq-consumer-test" target="8" />
       <module name="rabbitmq-producer-test" target="8" />

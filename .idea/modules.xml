@@ -12,7 +12,6 @@
       <module fileurl="file://$PROJECT_DIR$/lib/lib.iml" filepath="$PROJECT_DIR$/lib/lib.iml" />
       <module fileurl="file://$PROJECT_DIR$/multithread-client/multithread-client.iml" filepath="$PROJECT_DIR$/multithread-client/multithread-client.iml" />
       <module fileurl="file://$PROJECT_DIR$/multithread-server/multithread-server.iml" filepath="$PROJECT_DIR$/multithread-server/multithread-server.iml" />
-      <module fileurl="file://$PROJECT_DIR$/mysql-tutorial-test/mysql-tutorial-test.iml" filepath="$PROJECT_DIR$/mysql-tutorial-test/mysql-tutorial-test.iml" />
       <module fileurl="file://$PROJECT_DIR$/nacos-test/nacos-test.iml" filepath="$PROJECT_DIR$/nacos-test/nacos-test.iml" />
       <module fileurl="file://$PROJECT_DIR$/nexus-maven-test/nexus-maven-test.iml" filepath="$PROJECT_DIR$/nexus-maven-test/nexus-maven-test.iml" />
       <module fileurl="file://$PROJECT_DIR$/partial-content-download/partial-content-download.iml" filepath="$PROJECT_DIR$/partial-content-download/partial-content-download.iml" />
