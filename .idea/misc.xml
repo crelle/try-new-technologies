@@ -27,6 +27,7 @@
         <option value="$PROJECT_DIR$/nacos-test/pom.xml" />
         <option value="$PROJECT_DIR$/activiti-quick-start/pom.xml" />
         <option value="$PROJECT_DIR$/mysql-jdbc-test/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-aop-aspectj-annotation-example/pom.xml" />
       </list>
     </option>
   </component>

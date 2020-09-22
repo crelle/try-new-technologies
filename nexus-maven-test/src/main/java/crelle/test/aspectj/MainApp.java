@@ -1,4 +1,4 @@
-package com.crelle.test;
+package crelle.test.aspectj;
 
 /**
  * @author:crelle

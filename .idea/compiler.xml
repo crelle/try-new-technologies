@@ -16,9 +16,10 @@
         <module name="grab-red-package" />
         <module name="multithread-server" />
         <module name="classLoader" />
-        <module name="spring-test-unit" />
-        <module name="web-server-example" />
         <module name="feign-eureka-test" />
+        <module name="web-server-example" />
+        <module name="spring-test-unit" />
+        <module name="spring-aop-aspectj-annotation-example" />
         <module name="nexus-maven-test" />
       </profile>
     </annotationProcessing>
@@ -28,13 +29,13 @@
       <module name="concurrent-server" target="1.8" />
       <module name="grab-red-package" target="1.8" />
       <module name="multithread-server" target="1.8" />
-      <module name="mysql-tutorial-test" target="8" />
       <module name="nacos-test" target="1.8" />
       <module name="nexus-maven-test" target="1.5" />
       <module name="partial-content-download" target="1.8" />
       <module name="rabbitmq-consumer-test" target="8" />
       <module name="rabbitmq-producer-test" target="8" />
       <module name="redisson-client-tools" target="1.8" />
+      <module name="spring-aop-aspectj-annotation-example" target="1.8" />
       <module name="spring-test-unit" target="1.8" />
       <module name="web-server-example" target="1.8" />
     </bytecodeTargetLevel>
@@ -47,6 +48,7 @@
       <module name="nacos-test" options="-parameters" />
       <module name="partial-content-download" options="-parameters" />
       <module name="redisson-client-tools" options="-parameters" />
+      <module name="spring-aop-aspectj-annotation-example" options="-parameters" />
       <module name="spring-test-unit" options="-parameters" />
       <module name="web-server-example" options="-parameters" />
     </option>
