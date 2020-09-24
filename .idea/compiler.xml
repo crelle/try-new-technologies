@@ -11,6 +11,7 @@
         <module name="redisson-client-tools" />
         <module name="nacos-test" />
         <module name="partial-content-download" />
+        <module name="spring-framework-test" />
         <module name="activiti-quick-start" />
         <module name="redis-client-tools" />
         <module name="grab-red-package" />
@@ -36,6 +37,7 @@
       <module name="rabbitmq-producer-test" target="8" />
       <module name="redisson-client-tools" target="1.8" />
       <module name="spring-aop-aspectj-annotation-example" target="1.8" />
+      <module name="spring-framework-test" target="1.8" />
       <module name="spring-test-unit" target="1.8" />
       <module name="web-server-example" target="1.8" />
     </bytecodeTargetLevel>
@@ -49,6 +51,7 @@
       <module name="partial-content-download" options="-parameters" />
       <module name="redisson-client-tools" options="-parameters" />
       <module name="spring-aop-aspectj-annotation-example" options="-parameters" />
+      <module name="spring-framework-test" options="-parameters" />
       <module name="spring-test-unit" options="-parameters" />
       <module name="web-server-example" options="-parameters" />
     </option>
