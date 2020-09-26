@@ -21,5 +21,6 @@ public class DemoApplication implements CommandLineRunner {
 
         System.out.println(animalKeeper.getTiger().type());
 
+
     }
 }
