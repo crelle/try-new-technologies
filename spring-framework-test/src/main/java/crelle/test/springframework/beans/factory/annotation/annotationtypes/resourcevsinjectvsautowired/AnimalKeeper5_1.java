@@ -1,6 +1,5 @@
-package crelle.test.springframework.beans.factory.annotation.annotationtypes.test1;
+package crelle.test.springframework.beans.factory.annotation.annotationtypes.resourcevsinjectvsautowired;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 

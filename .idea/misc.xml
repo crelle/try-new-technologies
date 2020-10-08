@@ -29,6 +29,7 @@
         <option value="$PROJECT_DIR$/mysql-jdbc-test/pom.xml" />
         <option value="$PROJECT_DIR$/spring-aop-aspectj-annotation-example/pom.xml" />
         <option value="$PROJECT_DIR$/spring-framework-test/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-framework-boot-test/pom.xml" />
       </list>
     </option>
   </component>
