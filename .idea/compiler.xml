@@ -11,18 +11,30 @@
         <module name="redisson-client-tools" />
         <module name="nacos-test" />
         <module name="partial-content-download" />
-        <module name="spring-framework-test" />
         <module name="activiti-quick-start" />
         <module name="redis-client-tools" />
         <module name="grab-red-package" />
         <module name="multithread-server" />
         <module name="classLoader" />
-        <module name="feign-eureka-test" />
-        <module name="web-server-example" />
-        <module name="spring-framework-boot-test" />
         <module name="spring-test-unit" />
+        <module name="web-server-example" />
+        <module name="spring-boot-api-test" />
+        <module name="feign-eureka-test" />
         <module name="spring-aop-aspectj-annotation-example" />
         <module name="nexus-maven-test" />
+        <module name="spring-framework-api-test" />
+      </profile>
+      <profile name="Annotation profile for demo" enabled="true">
+        <sourceOutputDir name="../../spring-data-api-test/target/generated-sources/annotations" />
+        <sourceTestOutputDir name="../../spring-data-api-test/target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="spring-data-api-test" />
+      </profile>
+      <profile name="Annotation profile for mysql-jdbc-test" enabled="true">
+        <sourceOutputDir name="../mysql-tutorial-test/target/generated-sources/annotations" />
+        <sourceTestOutputDir name="../mysql-tutorial-test/target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="mysql-jdbc-test" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="8">
@@ -31,6 +43,7 @@
       <module name="concurrent-server" target="1.8" />
       <module name="grab-red-package" target="1.8" />
       <module name="multithread-server" target="1.8" />
+      <module name="mysql-jdbc-test" target="1.5" />
       <module name="nacos-test" target="1.8" />
       <module name="nexus-maven-test" target="1.5" />
       <module name="partial-content-download" target="1.8" />
@@ -38,8 +51,9 @@
       <module name="rabbitmq-producer-test" target="8" />
       <module name="redisson-client-tools" target="1.8" />
       <module name="spring-aop-aspectj-annotation-example" target="1.8" />
-      <module name="spring-framework-boot-test" target="1.8" />
-      <module name="spring-framework-test" target="1.8" />
+      <module name="spring-boot-api-test" target="1.8" />
+      <module name="spring-data-api-test" target="1.8" />
+      <module name="spring-framework-api-test" target="1.8" />
       <module name="spring-test-unit" target="1.8" />
       <module name="web-server-example" target="1.8" />
     </bytecodeTargetLevel>
@@ -53,8 +67,9 @@
       <module name="partial-content-download" options="-parameters" />
       <module name="redisson-client-tools" options="-parameters" />
       <module name="spring-aop-aspectj-annotation-example" options="-parameters" />
-      <module name="spring-framework-boot-test" options="-parameters" />
-      <module name="spring-framework-test" options="-parameters" />
+      <module name="spring-boot-api-test" options="-parameters" />
+      <module name="spring-data-api-test" options="-parameters" />
+      <module name="spring-framework-api-test" options="-parameters" />
       <module name="spring-test-unit" options="-parameters" />
       <module name="web-server-example" options="-parameters" />
     </option>

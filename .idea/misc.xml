@@ -30,6 +30,13 @@
         <option value="$PROJECT_DIR$/spring-aop-aspectj-annotation-example/pom.xml" />
         <option value="$PROJECT_DIR$/spring-framework-test/pom.xml" />
         <option value="$PROJECT_DIR$/spring-framework-boot-test/pom.xml" />
+        <option value="$PROJECT_DIR$/mysql-tutorial-test/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-data-api-test/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-project-api-test/other/spring-aop-aspectj-annotation-example/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-project-api-test/other/spring-test-unit/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-project-api-test/spring-boot-api-test/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-project-api-test/spring-framework-api-test/pom.xml" />
+        <option value="$PROJECT_DIR$/redisson-client-tools/pom.xml" />
       </list>
     </option>
   </component>
