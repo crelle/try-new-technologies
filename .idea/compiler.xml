@@ -9,7 +9,6 @@
         <outputRelativeToContentRoot value="true" />
         <module name="concurrent-server" />
         <module name="redisson-client-tools" />
-        <module name="nacos-test" />
         <module name="partial-content-download" />
         <module name="activiti-quick-start" />
         <module name="redis-client-tools" />
@@ -22,6 +21,7 @@
         <module name="feign-eureka-test" />
         <module name="spring-aop-aspectj-annotation-example" />
         <module name="nexus-maven-test" />
+        <module name="nacos-api-test" />
         <module name="spring-framework-api-test" />
       </profile>
       <profile name="Annotation profile for demo" enabled="true">
@@ -44,7 +44,7 @@
       <module name="grab-red-package" target="1.8" />
       <module name="multithread-server" target="1.8" />
       <module name="mysql-jdbc-test" target="1.5" />
-      <module name="nacos-test" target="1.8" />
+      <module name="nacos-api-test" target="1.8" />
       <module name="nexus-maven-test" target="1.5" />
       <module name="partial-content-download" target="1.8" />
       <module name="rabbitmq-consumer-test" target="8" />
@@ -63,7 +63,7 @@
       <module name="concurrent-server" options="-parameters" />
       <module name="grab-red-package" options="-parameters" />
       <module name="multithread-server" options="-parameters" />
-      <module name="nacos-test" options="-parameters" />
+      <module name="nacos-api-test" options="-parameters" />
       <module name="partial-content-download" options="-parameters" />
       <module name="redisson-client-tools" options="-parameters" />
       <module name="spring-aop-aspectj-annotation-example" options="-parameters" />

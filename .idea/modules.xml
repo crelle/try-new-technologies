@@ -2,31 +2,31 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/activiti-quick-start/activiti-quick-start.iml" filepath="$PROJECT_DIR$/activiti-quick-start/activiti-quick-start.iml" />
-      <module fileurl="file://$PROJECT_DIR$/classLoader/classLoader.iml" filepath="$PROJECT_DIR$/classLoader/classLoader.iml" />
-      <module fileurl="file://$PROJECT_DIR$/concurrent-server/concurrent-server.iml" filepath="$PROJECT_DIR$/concurrent-server/concurrent-server.iml" />
-      <module fileurl="file://$PROJECT_DIR$/copy-files-with-parallel/copy-files-with-parallel.iml" filepath="$PROJECT_DIR$/copy-files-with-parallel/copy-files-with-parallel.iml" />
-      <module fileurl="file://$PROJECT_DIR$/grab-red-package/grab-red-package.iml" filepath="$PROJECT_DIR$/grab-red-package/grab-red-package.iml" />
-      <module fileurl="file://$PROJECT_DIR$/increment-packaging-tools/increment-packaging-tools.iml" filepath="$PROJECT_DIR$/increment-packaging-tools/increment-packaging-tools.iml" />
-      <module fileurl="file://$PROJECT_DIR$/increment-packaging-tools-sftp/increment-packaging-tools-sftp.iml" filepath="$PROJECT_DIR$/increment-packaging-tools-sftp/increment-packaging-tools-sftp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/other/activiti-quick-start/activiti-quick-start.iml" filepath="$PROJECT_DIR$/other/activiti-quick-start/activiti-quick-start.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jdk-test/classLoader/classLoader.iml" filepath="$PROJECT_DIR$/jdk-test/classLoader/classLoader.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jdk-test/concurrent-server/concurrent-server.iml" filepath="$PROJECT_DIR$/jdk-test/concurrent-server/concurrent-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/my-projects/copy-files-with-parallel/copy-files-with-parallel.iml" filepath="$PROJECT_DIR$/my-projects/copy-files-with-parallel/copy-files-with-parallel.iml" />
+      <module fileurl="file://$PROJECT_DIR$/my-projects/grab-red-package/grab-red-package.iml" filepath="$PROJECT_DIR$/my-projects/grab-red-package/grab-red-package.iml" />
+      <module fileurl="file://$PROJECT_DIR$/my-projects/increment-packaging-tools/increment-packaging-tools.iml" filepath="$PROJECT_DIR$/my-projects/increment-packaging-tools/increment-packaging-tools.iml" />
+      <module fileurl="file://$PROJECT_DIR$/my-projects/increment-packaging-tools-sftp/increment-packaging-tools-sftp.iml" filepath="$PROJECT_DIR$/my-projects/increment-packaging-tools-sftp/increment-packaging-tools-sftp.iml" />
       <module fileurl="file://$PROJECT_DIR$/lib/lib.iml" filepath="$PROJECT_DIR$/lib/lib.iml" />
-      <module fileurl="file://$PROJECT_DIR$/multithread-client/multithread-client.iml" filepath="$PROJECT_DIR$/multithread-client/multithread-client.iml" />
-      <module fileurl="file://$PROJECT_DIR$/multithread-server/multithread-server.iml" filepath="$PROJECT_DIR$/multithread-server/multithread-server.iml" />
-      <module fileurl="file://$PROJECT_DIR$/mysql-jdbc-test/mysql-jdbc-test.iml" filepath="$PROJECT_DIR$/mysql-jdbc-test/mysql-jdbc-test.iml" />
-      <module fileurl="file://$PROJECT_DIR$/nacos-test/nacos-test.iml" filepath="$PROJECT_DIR$/nacos-test/nacos-test.iml" />
-      <module fileurl="file://$PROJECT_DIR$/nexus-maven-test/nexus-maven-test.iml" filepath="$PROJECT_DIR$/nexus-maven-test/nexus-maven-test.iml" />
-      <module fileurl="file://$PROJECT_DIR$/partial-content-download/partial-content-download.iml" filepath="$PROJECT_DIR$/partial-content-download/partial-content-download.iml" />
-      <module fileurl="file://$PROJECT_DIR$/rabbitmq-consumer-test/rabbitmq-consumer-test.iml" filepath="$PROJECT_DIR$/rabbitmq-consumer-test/rabbitmq-consumer-test.iml" />
-      <module fileurl="file://$PROJECT_DIR$/rabbitmq-producer-test/rabbitmq-producer-test.iml" filepath="$PROJECT_DIR$/rabbitmq-producer-test/rabbitmq-producer-test.iml" />
-      <module fileurl="file://$PROJECT_DIR$/recursion-delete-file/recursion-delete-file.iml" filepath="$PROJECT_DIR$/recursion-delete-file/recursion-delete-file.iml" />
-      <module fileurl="file://$PROJECT_DIR$/redisson-client-tools/redisson-client-tools.iml" filepath="$PROJECT_DIR$/redisson-client-tools/redisson-client-tools.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jdk-test/multithread-client/multithread-client.iml" filepath="$PROJECT_DIR$/jdk-test/multithread-client/multithread-client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jdk-test/multithread-server/multithread-server.iml" filepath="$PROJECT_DIR$/jdk-test/multithread-server/multithread-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jdk-test/mysql-jdbc-test/mysql-jdbc-test.iml" filepath="$PROJECT_DIR$/jdk-test/mysql-jdbc-test/mysql-jdbc-test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/nacos-test/nacos-api-test/nacos-api-test.iml" filepath="$PROJECT_DIR$/nacos-test/nacos-api-test/nacos-api-test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/other/nexus-maven-test/nexus-maven-test.iml" filepath="$PROJECT_DIR$/other/nexus-maven-test/nexus-maven-test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/my-projects/partial-content-download/partial-content-download.iml" filepath="$PROJECT_DIR$/my-projects/partial-content-download/partial-content-download.iml" />
+      <module fileurl="file://$PROJECT_DIR$/rabbitmq-test/rabbitmq-consumer-test/rabbitmq-consumer-test.iml" filepath="$PROJECT_DIR$/rabbitmq-test/rabbitmq-consumer-test/rabbitmq-consumer-test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/rabbitmq-test/rabbitmq-producer-test/rabbitmq-producer-test.iml" filepath="$PROJECT_DIR$/rabbitmq-test/rabbitmq-producer-test/rabbitmq-producer-test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/redis-test/clients/recursion-delete-file/recursion-delete-file.iml" filepath="$PROJECT_DIR$/redis-test/clients/recursion-delete-file/recursion-delete-file.iml" />
+      <module fileurl="file://$PROJECT_DIR$/redis-test/clients/redisson-client-tools/redisson-client-tools.iml" filepath="$PROJECT_DIR$/redis-test/clients/redisson-client-tools/redisson-client-tools.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-project-api-test/other/spring-aop-aspectj-annotation-example/spring-aop-aspectj-annotation-example.iml" filepath="$PROJECT_DIR$/spring-project-api-test/other/spring-aop-aspectj-annotation-example/spring-aop-aspectj-annotation-example.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-project-api-test/spring-boot-api-test/spring-boot-api-test.iml" filepath="$PROJECT_DIR$/spring-project-api-test/spring-boot-api-test/spring-boot-api-test.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-project-api-test/spring-data-api-test/spring-data-api-test.iml" filepath="$PROJECT_DIR$/spring-project-api-test/spring-data-api-test/spring-data-api-test.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-project-api-test/spring-framework-api-test/spring-framework-api-test.iml" filepath="$PROJECT_DIR$/spring-project-api-test/spring-framework-api-test/spring-framework-api-test.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-project-api-test/other/spring-test-unit/spring-test-unit.iml" filepath="$PROJECT_DIR$/spring-project-api-test/other/spring-test-unit/spring-test-unit.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/try-new-technologies.iml" filepath="$PROJECT_DIR$/.idea/try-new-technologies.iml" />
-      <module fileurl="file://$PROJECT_DIR$/web-server-example/web-server-example.iml" filepath="$PROJECT_DIR$/web-server-example/web-server-example.iml" />
+      <module fileurl="file://$PROJECT_DIR$/other/web-server-example/web-server-example.iml" filepath="$PROJECT_DIR$/other/web-server-example/web-server-example.iml" />
     </modules>
   </component>
 </project>
