@@ -9,12 +9,14 @@
         <outputRelativeToContentRoot value="true" />
         <module name="concurrent-server" />
         <module name="redisson-client-tools" />
+        <module name="spring-session-reference-test" />
         <module name="partial-content-download" />
         <module name="activiti-quick-start" />
         <module name="redis-client-tools" />
         <module name="grab-red-package" />
         <module name="multithread-server" />
         <module name="classLoader" />
+        <module name="spring-security-refrence-test" />
         <module name="spring-test-unit" />
         <module name="web-server-example" />
         <module name="spring-boot-api-test" />
@@ -54,6 +56,8 @@
       <module name="spring-boot-api-test" target="1.8" />
       <module name="spring-data-api-test" target="1.8" />
       <module name="spring-framework-api-test" target="1.8" />
+      <module name="spring-security-refrence-test" target="1.8" />
+      <module name="spring-session-reference-test" target="1.8" />
       <module name="spring-test-unit" target="1.8" />
       <module name="web-server-example" target="1.8" />
     </bytecodeTargetLevel>
@@ -70,6 +74,8 @@
       <module name="spring-boot-api-test" options="-parameters" />
       <module name="spring-data-api-test" options="-parameters" />
       <module name="spring-framework-api-test" options="-parameters" />
+      <module name="spring-security-refrence-test" options="-parameters" />
+      <module name="spring-session-reference-test" options="-parameters" />
       <module name="spring-test-unit" options="-parameters" />
       <module name="web-server-example" options="-parameters" />
     </option>
