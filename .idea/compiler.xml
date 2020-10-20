@@ -10,6 +10,7 @@
         <module name="concurrent-server" />
         <module name="redisson-client-tools" />
         <module name="spring-session-reference-test" />
+        <module name="mysql-jdbc-test" />
         <module name="partial-content-download" />
         <module name="activiti-quick-start" />
         <module name="redis-client-tools" />
@@ -18,6 +19,7 @@
         <module name="classLoader" />
         <module name="spring-security-refrence-test" />
         <module name="spring-test-unit" />
+        <module name="spring-data-api-test" />
         <module name="web-server-example" />
         <module name="spring-boot-api-test" />
         <module name="feign-eureka-test" />
@@ -25,22 +27,12 @@
         <module name="nexus-maven-test" />
         <module name="nacos-api-test" />
         <module name="spring-framework-api-test" />
-      </profile>
-      <profile name="Annotation profile for demo" enabled="true">
-        <sourceOutputDir name="../../spring-data-api-test/target/generated-sources/annotations" />
-        <sourceTestOutputDir name="../../spring-data-api-test/target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <module name="spring-data-api-test" />
-      </profile>
-      <profile name="Annotation profile for mysql-jdbc-test" enabled="true">
-        <sourceOutputDir name="../mysql-tutorial-test/target/generated-sources/annotations" />
-        <sourceTestOutputDir name="../mysql-tutorial-test/target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <module name="mysql-jdbc-test" />
+        <module name="apache-hadoop-test" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="8">
       <module name="activiti-quick-start" target="1.5" />
+      <module name="apache-hadoop-test" target="1.5" />
       <module name="classLoader" target="1.5" />
       <module name="concurrent-server" target="1.8" />
       <module name="grab-red-package" target="1.8" />

@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/other/activiti-quick-start/activiti-quick-start.iml" filepath="$PROJECT_DIR$/other/activiti-quick-start/activiti-quick-start.iml" />
+      <module fileurl="file://$PROJECT_DIR$/apache-test/apache-hadoop-test/apache-hadoop-test.iml" filepath="$PROJECT_DIR$/apache-test/apache-hadoop-test/apache-hadoop-test.iml" />
       <module fileurl="file://$PROJECT_DIR$/jdk-test/classLoader/classLoader.iml" filepath="$PROJECT_DIR$/jdk-test/classLoader/classLoader.iml" />
       <module fileurl="file://$PROJECT_DIR$/jdk-test/concurrent-server/concurrent-server.iml" filepath="$PROJECT_DIR$/jdk-test/concurrent-server/concurrent-server.iml" />
       <module fileurl="file://$PROJECT_DIR$/my-projects/copy-files-with-parallel/copy-files-with-parallel.iml" filepath="$PROJECT_DIR$/my-projects/copy-files-with-parallel/copy-files-with-parallel.iml" />

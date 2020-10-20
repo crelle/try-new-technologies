@@ -39,6 +39,17 @@
         <option value="$PROJECT_DIR$/redisson-client-tools/pom.xml" />
         <option value="$PROJECT_DIR$/spring-session-reference-test/pom.xml" />
         <option value="$PROJECT_DIR$/spring-security-refrence-test/pom.xml" />
+        <option value="$PROJECT_DIR$/apache-hadoop-test/pom.xml" />
+        <option value="$PROJECT_DIR$/apache-test/apache-hadoop-test/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-projects-api-test/spring-data-api-test/pom.xml" />
+        <option value="$PROJECT_DIR$/rabbitmq-test/rabbitmq-consumer-test/pom.xml" />
+        <option value="$PROJECT_DIR$/rabbitmq-test/rabbitmq-producer-test/pom.xml" />
+        <option value="$PROJECT_DIR$/jdk-test/classLoader/pom.xml" />
+        <option value="$PROJECT_DIR$/jdk-test/concurrent-server/pom.xml" />
+        <option value="$PROJECT_DIR$/jdk-test/multithread-server/pom.xml" />
+        <option value="$PROJECT_DIR$/jdk-test/mysql-jdbc-test/pom.xml" />
+        <option value="$PROJECT_DIR$/my-projects/grab-red-package/pom.xml" />
+        <option value="$PROJECT_DIR$/my-projects/partial-content-download/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
