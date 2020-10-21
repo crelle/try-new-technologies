@@ -11,7 +11,6 @@
         <module name="redisson-client-tools" />
         <module name="spring-session-reference-test" />
         <module name="partial-content-download" />
-        <module name="feign-eureka-test" />
         <module name="activiti-quick-start" />
         <module name="redis-client-tools" />
         <module name="grab-red-package" />
@@ -21,9 +20,10 @@
         <module name="mysql-jdbc-test" />
         <module name="spring-data-api-test" />
         <module name="web-server-example" />
+        <module name="spring-boot-api-test" />
         <module name="discard-application-server-test" />
         <module name="spring-test-unit" />
-        <module name="spring-boot-api-test" />
+        <module name="feign-eureka-test" />
         <module name="spring-aop-aspectj-annotation-example" />
         <module name="nexus-maven-test" />
         <module name="nacos-api-test" />
@@ -41,12 +41,12 @@
       <module name="discard-application-server-test" target="6" />
       <module name="grab-red-package" target="1.8" />
       <module name="multithread-server" target="1.8" />
-      <module name="mysql-jdbc-test" target="1.5" />
+      <module name="mysql-jdbc-test" target="1.8" />
       <module name="nacos-api-test" target="1.8" />
       <module name="nexus-maven-test" target="1.5" />
       <module name="partial-content-download" target="1.8" />
-      <module name="rabbitmq-consumer-test" target="8" />
-      <module name="rabbitmq-producer-test" target="8" />
+      <module name="rabbitmq-consumer-test" target="1.8" />
+      <module name="rabbitmq-producer-test" target="1.8" />
       <module name="redisson-client-tools" target="1.8" />
       <module name="spring-aop-aspectj-annotation-example" target="1.8" />
       <module name="spring-boot-api-test" target="1.8" />

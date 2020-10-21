@@ -61,6 +61,9 @@
         <option value="$PROJECT_DIR$/nacos-test/nacos-api-test/pom.xml" />
         <option value="$PROJECT_DIR$/redis-test/clients/redisson-client-tools/pom.xml" />
         <option value="$PROJECT_DIR$/spring-projects-api-test/other/spring-aop-aspectj-annotation-example/pom.xml" />
+        <option value="$PROJECT_DIR$/other/activiti-quick-start/pom.xml" />
+        <option value="$PROJECT_DIR$/other/nexus-maven-test/pom.xml" />
+        <option value="$PROJECT_DIR$/other/web-server-example/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
