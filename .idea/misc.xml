@@ -50,6 +50,17 @@
         <option value="$PROJECT_DIR$/jdk-test/mysql-jdbc-test/pom.xml" />
         <option value="$PROJECT_DIR$/my-projects/grab-red-package/pom.xml" />
         <option value="$PROJECT_DIR$/my-projects/partial-content-download/pom.xml" />
+        <option value="$PROJECT_DIR$/discard-test/pom.xml" />
+        <option value="$PROJECT_DIR$/discard-application-test/pom.xml" />
+        <option value="$PROJECT_DIR$/netty-projects-reference-test/discard-application-test/pom.xml" />
+        <option value="$PROJECT_DIR$/netty-projects-reference-test/discard-application-server-test/pom.xml" />
+        <option value="$PROJECT_DIR$/netty-projects-reference-test/discard-application-client-test/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-projects-reference-test/spring-security-refrence-test/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-projects-api-test/spring-framework-api-test/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-projects-api-test/spring-boot-api-test/pom.xml" />
+        <option value="$PROJECT_DIR$/nacos-test/nacos-api-test/pom.xml" />
+        <option value="$PROJECT_DIR$/redis-test/clients/redisson-client-tools/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-projects-api-test/other/spring-aop-aspectj-annotation-example/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

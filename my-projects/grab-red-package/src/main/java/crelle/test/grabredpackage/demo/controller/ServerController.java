@@ -1,5 +1,6 @@
 package crelle.test.grabredpackage.demo.controller;
 
+
 import crelle.test.redis.redisson.redpackage.GrabRedPackageServiceImpl;
 import org.springframework.web.bind.annotation.*;
 
@@ -38,7 +39,7 @@ public class ServerController {
     @GetMapping("/increaseRedPackage")
     public  void increaseRedPackage(@RequestParam("redPackageName") String redPackageName,@RequestParam("num") double num){
         grabRedPackageService.increaseRedPackage(redPackageName,num);
-        System.out.println(grabRedPackageService.getRedPackage(redPackageName));
+//        System.out.println(grabRedPackageService.getRedPackage(redPackageName));
     }
 
     /**

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>crelle.test</groupId>
+    <artifactId>discard-application-client-test</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <dependencies>
+        <!-- https://mvnrepository.com/artifact/io.netty/netty-all -->
+        <dependency>
+            <groupId>io.netty</groupId>
+            <artifactId>netty-all</artifactId>
+            <version>4.1.42.Final</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-shade-plugin</artifactId>
+                <version>1.2.1</version>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>shade</goal>
+                        </goals>
+                        <configuration>
+                            <transformers>
+                                <transformer
+                                        implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+                                    <mainClass>crelle.test.netty.discard.client.DiscardClient</mainClass>
+                                </transformer>
+                            </transformers>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>6</source>
+                    <target>6</target>
+                </configuration>
+            </plugin>
+            <!-- 打JAR包 -->
+            <!--plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <configuration>
+                    &lt;!&ndash; 不打包资源文件（配置文件和依赖包分开） &ndash;&gt;
+                    <excludes>
+                        <exclude>*.**</exclude>
+                        <exclude>*/*.xml</exclude>
+                    </excludes>
+                    <archive>
+                        <manifest>
+                           &lt;!&ndash; <addClasspath>true</addClasspath>&ndash;&gt;
+                            &lt;!&ndash; MANIFEST.MF 中 Class-Path 加入前缀 &ndash;&gt;
+&lt;!&ndash;                            <classpathPrefix>./lib/</classpathPrefix>&ndash;&gt;
+                            &lt;!&ndash; jar包不包含唯一版本标识 &ndash;&gt;
+                            &lt;!&ndash;<useUniqueVersions>false</useUniqueVersions>&ndash;&gt;
+                            &lt;!&ndash;指定入口类 &ndash;&gt;
+                            <mainClass>crelle.test.netty.discard.server.DiscardServer</mainClass>
+                        </manifest>
+                        &lt;!&ndash;<manifestEntries>
+                            &lt;!&ndash;MANIFEST.MF 中 Class-Path 加入资源文件目录 &ndash;&gt;
+&lt;!&ndash;                            <Class-Path>./config/</Class-Path>&ndash;&gt;
+                        </manifestEntries>&ndash;&gt;
+                    </archive>
+                    <outputDirectory>${project.build.directory}</outputDirectory>
+                </configuration>
+            </plugin>-->
+
+            <!-- 该插件的作用是用于复制依赖的jar包到指定的文件夹里 -->
+            <!--            <plugin>-->
+            <!--                <groupId>org.apache.maven.plugins</groupId>-->
+            <!--                <artifactId>maven-dependency-plugin</artifactId>-->
+            <!--                <executions>-->
+            <!--                    <execution>-->
+            <!--                        <id>copy-dependencies</id>-->
+            <!--                        <phase>package</phase>-->
+            <!--                        <goals>-->
+            <!--                            <goal>copy-dependencies</goal>-->
+            <!--                        </goals>-->
+            <!--                        <configuration>-->
+            <!--                            <outputDirectory>${project.build.directory}/lib/</outputDirectory>-->
+            <!--                        </configuration>-->
+            <!--                    </execution>-->
+            <!--                </executions>-->
+            <!--            </plugin>-->
+
+            <!-- 该插件的作用是用于复制指定的文件 -->
+            <!--            <plugin>-->
+            <!--                <artifactId>maven-resources-plugin</artifactId>-->
+            <!--                <executions>-->
+            <!--                    <execution> &lt;!&ndash; 复制配置文件 &ndash;&gt;-->
+            <!--                        <id>copy-resources</id>-->
+            <!--                        <phase>package</phase>-->
+            <!--                        <goals>-->
+            <!--                            <goal>copy-resources</goal>-->
+            <!--                        </goals>-->
+            <!--                        <configuration>-->
+            <!--                            <resources>-->
+            <!--                                <resource>-->
+            <!--                                    <directory>src/main/resources</directory>-->
+            <!--                                    <includes>-->
+            <!--                                        &lt;!&ndash; <include>*.properties</include> &ndash;&gt;-->
+            <!--                                    </includes>-->
+
+            <!--                                </resource>-->
+            <!--                            </resources>-->
+            <!--                            <outputDirectory>${project.build.directory}/config</outputDirectory>-->
+            <!--                        </configuration>-->
+            <!--                    </execution>-->
+            <!--                </executions>-->
+            <!--            </plugin>-->
+        </plugins>
+    </build>
+
+</project>

@@ -7,6 +7,8 @@
       <module fileurl="file://$PROJECT_DIR$/jdk-test/classLoader/classLoader.iml" filepath="$PROJECT_DIR$/jdk-test/classLoader/classLoader.iml" />
       <module fileurl="file://$PROJECT_DIR$/jdk-test/concurrent-server/concurrent-server.iml" filepath="$PROJECT_DIR$/jdk-test/concurrent-server/concurrent-server.iml" />
       <module fileurl="file://$PROJECT_DIR$/my-projects/copy-files-with-parallel/copy-files-with-parallel.iml" filepath="$PROJECT_DIR$/my-projects/copy-files-with-parallel/copy-files-with-parallel.iml" />
+      <module fileurl="file://$PROJECT_DIR$/netty-projects-reference-test/discard-application-client-test/discard-application-client-test.iml" filepath="$PROJECT_DIR$/netty-projects-reference-test/discard-application-client-test/discard-application-client-test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/netty-projects-reference-test/discard-application-server-test/discard-application-server-test.iml" filepath="$PROJECT_DIR$/netty-projects-reference-test/discard-application-server-test/discard-application-server-test.iml" />
       <module fileurl="file://$PROJECT_DIR$/my-projects/grab-red-package/grab-red-package.iml" filepath="$PROJECT_DIR$/my-projects/grab-red-package/grab-red-package.iml" />
       <module fileurl="file://$PROJECT_DIR$/my-projects/increment-packaging-tools/increment-packaging-tools.iml" filepath="$PROJECT_DIR$/my-projects/increment-packaging-tools/increment-packaging-tools.iml" />
       <module fileurl="file://$PROJECT_DIR$/my-projects/increment-packaging-tools-sftp/increment-packaging-tools-sftp.iml" filepath="$PROJECT_DIR$/my-projects/increment-packaging-tools-sftp/increment-packaging-tools-sftp.iml" />
