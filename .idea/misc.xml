@@ -64,6 +64,10 @@
         <option value="$PROJECT_DIR$/other/activiti-quick-start/pom.xml" />
         <option value="$PROJECT_DIR$/other/nexus-maven-test/pom.xml" />
         <option value="$PROJECT_DIR$/other/web-server-example/pom.xml" />
+        <option value="$PROJECT_DIR$/echo-application-client-test/pom.xml" />
+        <option value="$PROJECT_DIR$/echo-application-server-test/pom.xml" />
+        <option value="$PROJECT_DIR$/netty-projects-reference-test/echo-application-client-test/pom.xml" />
+        <option value="$PROJECT_DIR$/netty-projects-reference-test/echo-application-server-test/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
