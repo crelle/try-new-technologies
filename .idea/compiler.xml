@@ -10,6 +10,7 @@
         <module name="concurrent-server" />
         <module name="redisson-client-tools" />
         <module name="spring-session-reference-test" />
+        <module name="http-file-test" />
         <module name="partial-content-download" />
         <module name="feign-eureka-test" />
         <module name="activiti-quick-start" />
@@ -44,6 +45,7 @@
       <module name="echo-application-client-test" target="6" />
       <module name="echo-application-server-test" target="6" />
       <module name="grab-red-package" target="1.8" />
+      <module name="http-file-test" target="6" />
       <module name="multithread-server" target="1.8" />
       <module name="mysql-jdbc-test" target="8" />
       <module name="nacos-api-test" target="1.8" />
