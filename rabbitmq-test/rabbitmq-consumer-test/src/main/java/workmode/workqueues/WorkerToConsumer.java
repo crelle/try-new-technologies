@@ -40,17 +40,24 @@ public class WorkerToConsumer {
             System.out.println(" [x] Received '" + message + "'");
             try {
 //              doWork(message);
-                Thread.sleep(100);
+//                Thread.sleep(100);
                 System.out.println(count++);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
+//            } catch (InterruptedException e) {
+//                e.printStackTrace();
             } finally {
                 System.out.println(" [x] Done");
-                //消息一个一个的确认
-                channel.basicAck(delivery.getEnvelope().getDeliveryTag(), false);
+                //Parameters:
+                //deliveryTag - the tag from the received AMQP.Basic.GetOk or AMQP.Basic.Deliver
+                //multiple - true to acknowledge all messages up to and including the supplied delivery tag;
+                //           false to acknowledge just the supplied delivery tag.
+//                channel.basicAck(delivery.getEnvelope().getDeliveryTag(), false);
+                channel.basicNack(delivery.getEnvelope().getDeliveryTag(),false,false);
             }
         };
-        //使用false来关闭自动确认
+        //Parameters:
+        //queue - the name of the queue
+        //autoAck - true if the server should consider messages acknowledged once delivered; false if the server should expect explicit acknowledgements
+        //callback - an interface to the consumer object
         channel.basicConsume(TASK_QUEUE_NAME, false, deliverCallback, consumerTag -> { });
     }
 
