@@ -70,6 +70,7 @@
         <option value="$PROJECT_DIR$/netty-projects-reference-test/echo-application-server-test/pom.xml" />
         <option value="$PROJECT_DIR$/http-file-test/pom.xml" />
         <option value="$PROJECT_DIR$/netty-projects-reference-test/http-file-test/pom.xml" />
+        <option value="$PROJECT_DIR$/junit-api-test/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

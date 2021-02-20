@@ -15,6 +15,7 @@
       <module fileurl="file://$PROJECT_DIR$/netty-projects-reference-test/http-file-test/http-file-test.iml" filepath="$PROJECT_DIR$/netty-projects-reference-test/http-file-test/http-file-test.iml" />
       <module fileurl="file://$PROJECT_DIR$/my-projects/increment-packaging-tools/increment-packaging-tools.iml" filepath="$PROJECT_DIR$/my-projects/increment-packaging-tools/increment-packaging-tools.iml" />
       <module fileurl="file://$PROJECT_DIR$/my-projects/increment-packaging-tools-sftp/increment-packaging-tools-sftp.iml" filepath="$PROJECT_DIR$/my-projects/increment-packaging-tools-sftp/increment-packaging-tools-sftp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/junit-test/junit-api-test/junit-api-test.iml" filepath="$PROJECT_DIR$/junit-test/junit-api-test/junit-api-test.iml" />
       <module fileurl="file://$PROJECT_DIR$/lib/lib.iml" filepath="$PROJECT_DIR$/lib/lib.iml" />
       <module fileurl="file://$PROJECT_DIR$/jdk-test/multithread-client/multithread-client.iml" filepath="$PROJECT_DIR$/jdk-test/multithread-client/multithread-client.iml" />
       <module fileurl="file://$PROJECT_DIR$/jdk-test/multithread-server/multithread-server.iml" filepath="$PROJECT_DIR$/jdk-test/multithread-server/multithread-server.iml" />

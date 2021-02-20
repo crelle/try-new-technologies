@@ -9,12 +9,12 @@
         <outputRelativeToContentRoot value="true" />
         <module name="concurrent-server" />
         <module name="redisson-client-tools" />
+        <module name="apache-hadoop-test" />
         <module name="spring-session-reference-test" />
         <module name="http-file-test" />
         <module name="partial-content-download" />
-        <module name="feign-eureka-test" />
+        <module name="junit-api-test" />
         <module name="rabbitmq-producer-test" />
-        <module name="rabbitmq-consumer-test" />
         <module name="activiti-quick-start" />
         <module name="redis-client-tools" />
         <module name="grab-red-package" />
@@ -26,15 +26,16 @@
         <module name="mysql-jdbc-test" />
         <module name="spring-data-api-test" />
         <module name="web-server-example" />
+        <module name="spring-boot-api-test" />
         <module name="discard-application-server-test" />
         <module name="spring-test-unit" />
-        <module name="spring-boot-api-test" />
+        <module name="feign-eureka-test" />
         <module name="spring-aop-aspectj-annotation-example" />
         <module name="nexus-maven-test" />
         <module name="nacos-api-test" />
         <module name="discard-application-client-test" />
         <module name="spring-framework-api-test" />
-        <module name="apache-hadoop-test" />
+        <module name="rabbitmq-consumer-test" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="8">
@@ -48,6 +49,7 @@
       <module name="echo-application-server-test" target="6" />
       <module name="grab-red-package" target="1.8" />
       <module name="http-file-test" target="6" />
+      <module name="junit-api-test" target="1.8" />
       <module name="multithread-server" target="1.8" />
       <module name="mysql-jdbc-test" target="8" />
       <module name="nacos-api-test" target="1.8" />
