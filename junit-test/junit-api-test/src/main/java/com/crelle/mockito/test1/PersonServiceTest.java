@@ -7,7 +7,6 @@ import static org.junit.Assert.*;
 import static org.mockito.Mockito.*;
 
 import org.mockito.Mock;
-import org.mockito.Mockito.*;
 import org.mockito.MockitoAnnotations;
 
 import java.util.List;
@@ -22,6 +21,7 @@ import java.util.List;
 public class PersonServiceTest {
 
     private IPersonDao mockDao;
+
     private PersonService personService;
 
     @Before
