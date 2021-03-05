@@ -7,39 +7,42 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="concurrent-server" />
-        <module name="redisson-client-tools" />
-        <module name="apache-hadoop-test" />
-        <module name="spring-session-reference-test" />
-        <module name="http-file-test" />
-        <module name="partial-content-download" />
-        <module name="junit-api-test" />
-        <module name="rabbitmq-producer-test" />
-        <module name="activiti-quick-start" />
-        <module name="redis-client-tools" />
-        <module name="grab-red-package" />
-        <module name="echo-application-client-test" />
-        <module name="multithread-server" />
-        <module name="classLoader" />
-        <module name="echo-application-server-test" />
-        <module name="spring-security-refrence-test" />
-        <module name="mysql-jdbc-test" />
         <module name="spring-data-api-test" />
+        <module name="spring-security-refrence-test" />
         <module name="web-server-example" />
-        <module name="spring-boot-api-test" />
+        <module name="mysql-jdbc-test" />
         <module name="discard-application-server-test" />
-        <module name="spring-test-unit" />
-        <module name="feign-eureka-test" />
         <module name="spring-aop-aspectj-annotation-example" />
-        <module name="nexus-maven-test" />
-        <module name="nacos-api-test" />
-        <module name="discard-application-client-test" />
-        <module name="spring-framework-api-test" />
+        <module name="concurrent-server" />
+        <module name="feign-eureka-test" />
+        <module name="classLoader" />
+        <module name="grab-red-package" />
         <module name="rabbitmq-consumer-test" />
+        <module name="redisson-client-tools" />
+        <module name="multithread-server" />
+        <module name="spring-session-reference-test" />
+        <module name="apache-aspectj-test" />
+        <module name="nexus-maven-test" />
+        <module name="junit-api-test" />
+        <module name="discard-application-client-test" />
+        <module name="partial-content-download" />
+        <module name="activiti-quick-start" />
+        <module name="spring-boot-api-test" />
+        <module name="rabbitmq-producer-test" />
+        <module name="spring-framework-api-test" />
+        <module name="echo-application-server-test" />
+        <module name="http-file-test" />
+        <module name="redis-client-tools" />
+        <module name="nacos-api-test" />
+        <module name="echo-application-client-test" />
+        <module name="apache-hadoop-test" />
+        <module name="spring-test-unit" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="8">
       <module name="activiti-quick-start" target="1.8" />
+      <module name="annotation-test" target="1.8" />
+      <module name="apache-aspectj-test" target="1.8" />
       <module name="apache-hadoop-test" target="1.8" />
       <module name="classLoader" target="1.8" />
       <module name="concurrent-server" target="1.8" />
@@ -69,6 +72,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="apache-aspectj-test" options="-parameters" />
       <module name="concurrent-server" options="-parameters" />
       <module name="grab-red-package" options="-parameters" />
       <module name="multithread-server" options="-parameters" />

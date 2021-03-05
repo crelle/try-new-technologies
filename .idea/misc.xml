@@ -72,6 +72,8 @@
         <option value="$PROJECT_DIR$/netty-projects-reference-test/http-file-test/pom.xml" />
         <option value="$PROJECT_DIR$/junit-api-test/pom.xml" />
         <option value="$PROJECT_DIR$/junit-test/junit-api-test/pom.xml" />
+        <option value="$PROJECT_DIR$/apache-aspectj-test/pom.xml" />
+        <option value="$PROJECT_DIR$/apache-test/apache-aspectj-test/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
