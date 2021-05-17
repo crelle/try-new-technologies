@@ -24,6 +24,7 @@
       <module fileurl="file://$PROJECT_DIR$/nacos-test/nacos-api-test/nacos-api-test.iml" filepath="$PROJECT_DIR$/nacos-test/nacos-api-test/nacos-api-test.iml" />
       <module fileurl="file://$PROJECT_DIR$/other/nexus-maven-test/nexus-maven-test.iml" filepath="$PROJECT_DIR$/other/nexus-maven-test/nexus-maven-test.iml" />
       <module fileurl="file://$PROJECT_DIR$/my-projects/partial-content-download/partial-content-download.iml" filepath="$PROJECT_DIR$/my-projects/partial-content-download/partial-content-download.iml" />
+      <module fileurl="file://$PROJECT_DIR$/design-pattern/proxy-pattern/proxy-pattern.iml" filepath="$PROJECT_DIR$/design-pattern/proxy-pattern/proxy-pattern.iml" />
       <module fileurl="file://$PROJECT_DIR$/rabbitmq-test/rabbitmq-consumer-test/rabbitmq-consumer-test.iml" filepath="$PROJECT_DIR$/rabbitmq-test/rabbitmq-consumer-test/rabbitmq-consumer-test.iml" />
       <module fileurl="file://$PROJECT_DIR$/rabbitmq-test/rabbitmq-producer-test/rabbitmq-producer-test.iml" filepath="$PROJECT_DIR$/rabbitmq-test/rabbitmq-producer-test/rabbitmq-producer-test.iml" />
       <module fileurl="file://$PROJECT_DIR$/redis-test/clients/recursion-delete-file/recursion-delete-file.iml" filepath="$PROJECT_DIR$/redis-test/clients/recursion-delete-file/recursion-delete-file.iml" />

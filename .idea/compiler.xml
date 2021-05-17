@@ -12,6 +12,7 @@
         <module name="web-server-example" />
         <module name="mysql-jdbc-test" />
         <module name="discard-application-server-test" />
+        <module name="proxy-pattern" />
         <module name="spring-aop-aspectj-annotation-example" />
         <module name="concurrent-server" />
         <module name="feign-eureka-test" />
@@ -24,7 +25,7 @@
         <module name="apache-aspectj-test" />
         <module name="nexus-maven-test" />
         <module name="junit-api-test" />
-        <module name="discard-application-client-test" />
+        <module name="apache-hadoop-test" />
         <module name="partial-content-download" />
         <module name="activiti-quick-start" />
         <module name="spring-boot-api-test" />
@@ -35,7 +36,7 @@
         <module name="redis-client-tools" />
         <module name="nacos-api-test" />
         <module name="echo-application-client-test" />
-        <module name="apache-hadoop-test" />
+        <module name="discard-application-client-test" />
         <module name="spring-test-unit" />
       </profile>
     </annotationProcessing>
@@ -52,12 +53,14 @@
       <module name="echo-application-server-test" target="6" />
       <module name="grab-red-package" target="1.8" />
       <module name="http-file-test" target="6" />
+      <module name="info-entry-sys" target="1.8" />
       <module name="junit-api-test" target="1.8" />
       <module name="multithread-server" target="1.8" />
       <module name="mysql-jdbc-test" target="8" />
       <module name="nacos-api-test" target="1.8" />
       <module name="nexus-maven-test" target="1.8" />
       <module name="partial-content-download" target="1.8" />
+      <module name="proxy-pattern" target="1.8" />
       <module name="rabbitmq-consumer-test" target="1.8" />
       <module name="rabbitmq-producer-test" target="1.8" />
       <module name="redisson-client-tools" target="1.8" />
@@ -75,6 +78,7 @@
       <module name="apache-aspectj-test" options="-parameters" />
       <module name="concurrent-server" options="-parameters" />
       <module name="grab-red-package" options="-parameters" />
+      <module name="info-entry-sys" options="-parameters" />
       <module name="multithread-server" options="-parameters" />
       <module name="nacos-api-test" options="-parameters" />
       <module name="partial-content-download" options="-parameters" />

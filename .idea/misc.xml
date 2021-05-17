@@ -74,6 +74,9 @@
         <option value="$PROJECT_DIR$/junit-test/junit-api-test/pom.xml" />
         <option value="$PROJECT_DIR$/apache-aspectj-test/pom.xml" />
         <option value="$PROJECT_DIR$/apache-test/apache-aspectj-test/pom.xml" />
+        <option value="$PROJECT_DIR$/info-entry-sys/pom.xml" />
+        <option value="$PROJECT_DIR$/design-pattern/pom.xml" />
+        <option value="$PROJECT_DIR$/design-pattern/proxy-pattern/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
